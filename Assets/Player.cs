@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     // cached component references
     Rigidbody2D myRigidBody;
     Animator myAnimator;
+    Collider2D myCollider;
 
     // Start is called before the first frame update
     // Messages then methods
@@ -24,6 +25,7 @@ public class Player : MonoBehaviour
     {
         myRigidBody = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
+        myCollider = GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
@@ -46,8 +48,11 @@ public class Player : MonoBehaviour
     {
         if (CrossPlatformInputManager.GetButtonDown("Jump"))
         {
-            Vector2 jumpVelocityToAdd = new Vector2(0f, jumpSpeed);
-            myRigidBody.velocity += jumpVelocityToAdd;    
+            if (myCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
+            {
+                Vector2 jumpVelocityToAdd = new Vector2(0f, jumpSpeed);
+                myRigidBody.velocity += jumpVelocityToAdd;
+            }
         }
     }
 
