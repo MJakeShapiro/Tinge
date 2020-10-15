@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     // configuration
     [SerializeField] float runSpeed = 5f;
     [SerializeField] float jumpSpeed = 5f;
+    [SerializeField] float climbSpeed = 5f;
 
     // state
     bool isAlive = true;
@@ -17,7 +18,9 @@ public class Player : MonoBehaviour
     // cached component references
     Rigidbody2D myRigidBody;
     Animator myAnimator;
-    Collider2D myCollider;
+    CapsuleCollider2D bodyCollider;
+    BoxCollider2D feetCollider;
+    float gravityScaleAtStart;
 
     // Start is called before the first frame update
     // Messages then methods
@@ -25,13 +28,16 @@ public class Player : MonoBehaviour
     {
         myRigidBody = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
-        myCollider = GetComponent<Collider2D>();
+        bodyCollider = GetComponent<CapsuleCollider2D>();
+        feetCollider = GetComponent<BoxCollider2D>();
+        gravityScaleAtStart = myRigidBody.gravityScale;
     }
 
     // Update is called once per frame
     void Update()
     {
         Run();
+        ClimbLadder();
         Jump();
         FlipSprite();
     }
@@ -44,11 +50,31 @@ public class Player : MonoBehaviour
 
     }
 
+    private void ClimbLadder()
+    {
+        
+        if (feetCollider.IsTouchingLayers(LayerMask.GetMask("Climbing")))
+        {
+            myAnimator.SetBool("Climbing", true);
+            float controlThrow = CrossPlatformInputManager.GetAxis("Vertical");
+            Vector2 climbVelocity = new Vector2(myRigidBody.velocity.x, controlThrow * climbSpeed);
+            myRigidBody.velocity = climbVelocity;
+            myRigidBody.gravityScale = 0f;
+        }
+        else
+        {
+            myAnimator.SetBool("Climbing", false);
+            myRigidBody.gravityScale = gravityScaleAtStart;
+        }
+        
+        
+    }
+
     private void Jump()
     {
         if (CrossPlatformInputManager.GetButtonDown("Jump"))
         {
-            if (myCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
+            if (feetCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
             {
                 Vector2 jumpVelocityToAdd = new Vector2(0f, jumpSpeed);
                 myRigidBody.velocity += jumpVelocityToAdd;
