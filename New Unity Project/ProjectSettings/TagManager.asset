@@ -14,7 +14,7 @@ TagManager:
   - 
   - 
   - Ground
-  - 
+  - Ladder
   - 
   - 
   - 
@@ -43,6 +43,9 @@ TagManager:
     locked: 0
   - name: BackGround
     uniqueID: 2185390359
+    locked: 0
+  - name: Ladder
+    uniqueID: 1056341657
     locked: 0
   - name: Player
     uniqueID: 2792150565

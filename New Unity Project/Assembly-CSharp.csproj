@@ -55,7 +55,6 @@
     <Analyzer Include="/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Analyzers/Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets/Scripts/Player.cs" />
     <Compile Include="Assets/SampleScenes/Scripts/LevelReset.cs" />
     <Compile Include="Assets/SampleScenes/Menu/Scripts/SceneAndURLLoader.cs" />
     <Compile Include="Assets/SampleScenes/Menu/Scripts/PauseMenu.cs" />
@@ -64,6 +63,7 @@
     <Compile Include="Assets/SampleScenes/Scripts/SlowMoButton.cs" />
     <Compile Include="Assets/SampleScenes/Menu/Scripts/MenuSceneLoader.cs" />
     <Compile Include="Assets/SampleScenes/Scripts/PlaceTargetWithMouse.cs" />
+    <Compile Include="Assets/Scripts/Player.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets/SampleScenes/Shaders/Skybox-Procedural.shader" />
@@ -681,6 +681,12 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
