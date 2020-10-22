@@ -45,6 +45,8 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameManager.Instance.ChangingScenes)
+            return;
         DirectionSet();
         Dash();
         DashCounter();
