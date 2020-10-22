@@ -112,7 +112,7 @@ public class Player : MonoBehaviour
     {
         if (CrossPlatformInputManager.GetButtonDown("Dash"))
         {
-            if (canDash && !isDashing)
+            if (canDash)
             {
                 isDashing = true;
                 dashTime = TOTAL_DASH_TIME;
