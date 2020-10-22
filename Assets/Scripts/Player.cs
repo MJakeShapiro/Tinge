@@ -115,17 +115,15 @@ public class Player : MonoBehaviour
             if (canDash && !isDashing)
             {
                 isDashing = true;
+                dashTime = TOTAL_DASH_TIME;
+                myRigidBody.gravityScale = 0.0f;
+                GameObject DashEffectToDestroy = Instantiate(dashEffect, transform.position, Quaternion.identity);
+                Destroy(DashEffectToDestroy, 0.2f);
                 //animator.SetBool("IsDashing", true);
                 //AudioManager.instance.PlaySound("dash");
 
                 if (!boxCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
                     hasAirDashed = true;
-
-                dashTime = TOTAL_DASH_TIME;
-                myRigidBody.gravityScale = 0.0f;
-
-                GameObject DashEffectToDestroy = Instantiate(dashEffect, transform.position, Quaternion.identity);
-                Destroy(DashEffectToDestroy, 0.2f);
 
                 if (diagonalDash)
                     myRigidBody.velocity = new Vector2(CrossPlatformInputManager.GetAxis("Horizontal") * dashSpeed, CrossPlatformInputManager.GetAxis("Vertical") * dashSpeed);
