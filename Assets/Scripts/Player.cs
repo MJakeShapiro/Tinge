@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
 
     [Header("PlayTesting")]
     [SerializeField] bool diagonalDash;
+    [SerializeField] bool variableDashLength;
 
     Rigidbody2D myRigidBody;
     BoxCollider2D boxCollider;
@@ -157,7 +158,8 @@ public class Player : MonoBehaviour
     {
         if (isDashing)
         {
-            if (dashTime <= 0.0f)
+
+            if (dashTime <= 0.0f || (variableDashLength && CrossPlatformInputManager.GetButtonUp("Dash")))
             {
                 myRigidBody.velocity = Vector2.zero;
                 myRigidBody.gravityScale = 4.0f;

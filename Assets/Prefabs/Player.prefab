@@ -153,6 +153,7 @@ MonoBehaviour:
   TOTAL_DASH_TIME: 0.1
   MIN_DASH_COOLDOWN: 0.5
   diagonalDash: 0
+  variableDashLength: 0
 --- !u!70 &7994946315374802967
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
