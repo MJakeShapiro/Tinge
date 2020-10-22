@@ -5,15 +5,34 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class Player : MonoBehaviour
 {
-    // Start is called before the first frame update
-
+    
+    [Header("Movement")]
     [SerializeField] float runSpeed = 5f;
     [SerializeField] float jumpSpeed = 5f;
     [SerializeField] float climbSpeed = 5f;
 
+    [Header("Dash")]
+    [SerializeField] GameObject dashEffect;
+    [SerializeField] float dashSpeed = 50.0f;
+    [SerializeField] float TOTAL_DASH_TIME = 0.1f;
+    [SerializeField] float MIN_DASH_COOLDOWN = 0.5f;
+
+    [Header("PlayTesting")]
+    [SerializeField] bool diagonalDash;
+
     Rigidbody2D myRigidBody;
     BoxCollider2D boxCollider;
     float gravityScaleStart;
+    Direction direction = Direction.right;
+
+    // Private Dash Variables
+    bool canDash = true;
+    bool hasAirDashed = false;
+    bool isDashing = false;
+    float dashTime;
+    float dashCooldown = 0.0f;
+
+
 
     void Start()
     {
@@ -25,9 +44,26 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        DirectionSet();
+        Dash();
+        DashCounter();
+        if (isDashing)  // Briefly disable player controls if isDashing
+            return;
         Run();
         Climb();
         Jump();
+    }
+
+    private void DirectionSet()
+    {
+        if (CrossPlatformInputManager.GetAxis("Horizontal") > 0.0f)
+            direction = Direction.right;
+        if (CrossPlatformInputManager.GetAxis("Horizontal") < 0.0f)
+            direction = Direction.left;
+        if (CrossPlatformInputManager.GetAxis("Vertical") > 0.0f)
+            direction = Direction.up;
+        if (CrossPlatformInputManager.GetAxis("Vertical") < 0.0f)
+            direction = Direction.down;
     }
 
     private void Run()
@@ -47,8 +83,8 @@ public class Player : MonoBehaviour
 
         
 
-        float controlTrhow = CrossPlatformInputManager.GetAxis("Vertical");
-        Vector2 climbVelocity = new Vector2(myRigidBody.velocity.x, controlTrhow * climbSpeed);
+        float controlThrow = CrossPlatformInputManager.GetAxis("Vertical");
+        Vector2 climbVelocity = new Vector2(myRigidBody.velocity.x, controlThrow * climbSpeed);
         myRigidBody.velocity = climbVelocity;
         myRigidBody.gravityScale = 0f;
         
@@ -68,5 +104,82 @@ public class Player : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Dashes player according to dashSpeed. DiagonalDash option.
+    /// </summary>
+    public void Dash()
+    {
+        if (CrossPlatformInputManager.GetButtonDown("Dash"))
+        {
+            if (canDash && !isDashing)
+            {
+                isDashing = true;
+                //animator.SetBool("IsDashing", true);
+                //AudioManager.instance.PlaySound("dash");
 
+                if (!boxCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
+                    hasAirDashed = true;
+
+                dashTime = TOTAL_DASH_TIME;
+                myRigidBody.gravityScale = 0.0f;
+
+                GameObject DashEffectToDestroy = Instantiate(dashEffect, transform.position, Quaternion.identity);
+                Destroy(DashEffectToDestroy, 0.2f);
+
+                if (diagonalDash)
+                    myRigidBody.velocity = new Vector2(CrossPlatformInputManager.GetAxis("Horizontal") * dashSpeed, CrossPlatformInputManager.GetAxis("Vertical") * dashSpeed);
+                else
+                {
+                    switch (direction)
+                    {
+                        case Direction.right:
+                            myRigidBody.velocity = Vector2.right * dashSpeed;
+                            break;
+                        case Direction.left:
+                            myRigidBody.velocity = Vector2.left * dashSpeed;
+                            break;
+                        //case Direction.up:
+                        //    myRigidBody.velocity = Vector2.up * dashSpeed;
+                        //    break;
+                        //case Direction.down:
+                        //    myRigidBody.velocity = Vector2.down * dashSpeed;
+                        //    break;
+                    }
+                }
+            }
+        }
+    }
+
+    /// <summary>
+    /// Manages dash distance according to TOTAL_DASH_TIME
+    /// </summary>
+    private void DashCounter()
+    {
+        if (isDashing)
+        {
+            if (dashTime <= 0.0f)
+            {
+                myRigidBody.velocity = Vector2.zero;
+                myRigidBody.gravityScale = 4.0f;
+                isDashing = false;
+                canDash = false;
+                dashCooldown = MIN_DASH_COOLDOWN;
+            }
+            else
+            {
+                dashTime -= Time.deltaTime;
+            }
+        }
+        if (!canDash)
+            dashCooldown -= Time.deltaTime;
+        if (dashCooldown <= 0.0f)
+        {
+            if (!boxCollider.IsTouchingLayers(LayerMask.GetMask("Ground")) || !hasAirDashed)
+            {
+                canDash = true;
+                hasAirDashed = false;
+            }
+
+        }
+    }
 }
