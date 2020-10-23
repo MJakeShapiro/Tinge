@@ -61,10 +61,10 @@ public class Player : MonoBehaviour
             direction = Direction.right;
         if (CrossPlatformInputManager.GetAxis("Horizontal") < 0.0f)
             direction = Direction.left;
-        if (CrossPlatformInputManager.GetAxis("Vertical") > 0.0f)
-            direction = Direction.up;
-        if (CrossPlatformInputManager.GetAxis("Vertical") < 0.0f)
-            direction = Direction.down;
+        //if (CrossPlatformInputManager.GetAxis("Vertical") > 0.0f)
+        //    direction = Direction.up;
+        //if (CrossPlatformInputManager.GetAxis("Vertical") < 0.0f)
+        //    direction = Direction.down;
     }
 
     private void Run()
@@ -114,36 +114,46 @@ public class Player : MonoBehaviour
         {
             if (canDash)
             {
-                isDashing = true;
-                dashTime = TOTAL_DASH_TIME;
-                myRigidBody.gravityScale = 0.0f;
-                GameObject DashEffectToDestroy = Instantiate(dashEffect, transform.position, Quaternion.identity);
-                Destroy(DashEffectToDestroy, 0.2f);
-                //animator.SetBool("IsDashing", true);
-                //AudioManager.instance.PlaySound("dash");
+                GameObject DashEffectToDestroy;
 
                 if (!boxCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
                     hasAirDashed = true;
 
                 if (diagonalDash)
+                {
+                    isDashing = true;
+                    dashTime = TOTAL_DASH_TIME;
+                    myRigidBody.gravityScale = 0.0f;
                     myRigidBody.velocity = new Vector2(CrossPlatformInputManager.GetAxis("Horizontal") * dashSpeed, CrossPlatformInputManager.GetAxis("Vertical") * dashSpeed);
+                    DashEffectToDestroy = Instantiate(dashEffect, transform.position, Quaternion.identity);
+                    Destroy(DashEffectToDestroy, 0.2f);
+                }
                 else
                 {
-                    switch (direction)
+                    if (direction == Direction.right)
                     {
-                        case Direction.right:
-                            myRigidBody.velocity = Vector2.right * dashSpeed;
-                            break;
-                        case Direction.left:
-                            myRigidBody.velocity = Vector2.left * dashSpeed;
-                            break;
-                        //case Direction.up:
-                        //    myRigidBody.velocity = Vector2.up * dashSpeed;
-                        //    break;
-                        //case Direction.down:
-                        //    myRigidBody.velocity = Vector2.down * dashSpeed;
-                        //    break;
+                        isDashing = true;
+                        dashTime = TOTAL_DASH_TIME;
+                        myRigidBody.gravityScale = 0.0f;
+                        myRigidBody.velocity = Vector2.right * dashSpeed;
+                        DashEffectToDestroy = Instantiate(dashEffect, transform.position, Quaternion.identity);
+                        Destroy(DashEffectToDestroy, 0.2f);
                     }
+                    else if (direction == Direction.left)
+                    {
+                        isDashing = true;
+                        dashTime = TOTAL_DASH_TIME;
+                        myRigidBody.gravityScale = 0.0f;
+                        myRigidBody.velocity = Vector2.left * dashSpeed;
+                        DashEffectToDestroy = Instantiate(dashEffect, transform.position, Quaternion.identity);
+                        Destroy(DashEffectToDestroy, 0.2f);
+                    }
+                            //case Direction.up:
+                            //    myRigidBody.velocity = Vector2.up * dashSpeed;
+                            //    break;
+                            //case Direction.down:
+                            //    myRigidBody.velocity = Vector2.down * dashSpeed;
+                            //    break;
                 }
             }
         }
