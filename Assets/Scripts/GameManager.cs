@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -39,6 +40,14 @@ public class GameManager : MonoBehaviour
     {
         changingScenes = true;
         instance.sceneChanger.FadeToScene(sceneToLoad);
+    }
+
+    /// <summary>
+    /// Reloads current active scene
+    /// </summary>
+    public void ReloadScene()
+    {
+        instance.sceneChanger.FadeToScene(SceneManager.GetActiveScene().name);
     }
 
     public bool ChangingScenes { get { return changingScenes; } set { changingScenes = value; } }
