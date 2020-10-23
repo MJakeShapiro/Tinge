@@ -45,7 +45,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.Instance.ChangingScenes)
+        if (GameManager.Instance.changingScenes)
             return;
         DirectionSet();
         Dash();
@@ -193,5 +193,15 @@ public class Player : MonoBehaviour
             }
 
         }
+    }
+
+    /// <summary>
+    /// Called when player dies. Resets scene
+    /// </summary>
+    public void Die()
+    {
+        myRigidBody.velocity = Vector2.zero;
+        myRigidBody.gravityScale = 0.0f;
+        GameManager.Instance.ReloadScene();
     }
 }

@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
 {
     public SceneChanger sceneChanger;
 
-    bool changingScenes = false;
+    public bool changingScenes = false;
 
     //setup of singleton entity
     private static GameManager instance;
@@ -38,7 +38,6 @@ public class GameManager : MonoBehaviour
     /// </param>
     public void ChangeScene(string sceneToLoad)
     {
-        changingScenes = true;
         instance.sceneChanger.FadeToScene(sceneToLoad);
     }
 
@@ -49,6 +48,4 @@ public class GameManager : MonoBehaviour
     {
         instance.sceneChanger.FadeToScene(SceneManager.GetActiveScene().name);
     }
-
-    public bool ChangingScenes { get { return changingScenes; } set { changingScenes = value; } }
 }
