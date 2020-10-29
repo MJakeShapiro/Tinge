@@ -17,6 +17,10 @@ public class SceneChanger : MonoBehaviour
 
     public void FadeToScene(string sceneName)
     {
+        if (GameManager.Instance.changingScenes)
+            return;
+
+        GameManager.Instance.changingScenes = true;
         sceneToLoad = sceneName;
         animator.SetTrigger("FadeOut");
     }
@@ -25,7 +29,7 @@ public class SceneChanger : MonoBehaviour
     {
         SceneManager.LoadScene(sceneToLoad);
         animator.SetTrigger("FadeIn");
-        GameManager.Instance.ChangingScenes = false;
+        GameManager.Instance.changingScenes = false;
     }
 
     /// <summary>
