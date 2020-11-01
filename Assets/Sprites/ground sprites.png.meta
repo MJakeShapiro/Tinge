@@ -1,7 +1,109 @@
 fileFormatVersion: 2
 guid: 4484a7aba55a27247a213dc8d19edd82
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -1332001020269043211
+    second: ground sprites_0
+  - first:
+      213: -2611332696042828200
+    second: ground sprites_1
+  - first:
+      213: -1947122176689465599
+    second: ground sprites_2
+  - first:
+      213: 5239054343112578678
+    second: ground sprites_3
+  - first:
+      213: 9163030657793899466
+    second: ground sprites_4
+  - first:
+      213: -2392033008448101858
+    second: ground sprites_5
+  - first:
+      213: 6701264117594742102
+    second: ground sprites_6
+  - first:
+      213: -4421570384261220552
+    second: ground sprites_7
+  - first:
+      213: 7784175590829892151
+    second: ground sprites_8
+  - first:
+      213: 3901901863944030721
+    second: ground sprites_9
+  - first:
+      213: -7757286568740222179
+    second: ground sprites_10
+  - first:
+      213: 7230062964093559877
+    second: ground sprites_11
+  - first:
+      213: 5562123872749840202
+    second: ground sprites_12
+  - first:
+      213: 2294090707338474007
+    second: ground sprites_13
+  - first:
+      213: -1726319743905275475
+    second: ground sprites_14
+  - first:
+      213: 2911634020367406579
+    second: ground sprites_15
+  - first:
+      213: -5938673716157129102
+    second: ground sprites_16
+  - first:
+      213: -1483716961012539629
+    second: ground sprites_17
+  - first:
+      213: -920483431991513436
+    second: ground sprites_18
+  - first:
+      213: 2021616060153557980
+    second: ground sprites_19
+  - first:
+      213: 6063400417520201220
+    second: ground sprites_20
+  - first:
+      213: -3321984583906564890
+    second: ground sprites_21
+  - first:
+      213: 2963261323698618533
+    second: ground sprites_22
+  - first:
+      213: -58164890332772770
+    second: ground sprites_23
+  - first:
+      213: 678642067985652632
+    second: ground sprites_24
+  - first:
+      213: 4246307385580038807
+    second: ground sprites_25
+  - first:
+      213: -842810755516724642
+    second: ground sprites_26
+  - first:
+      213: 7996874842748452909
+    second: ground sprites_27
+  - first:
+      213: -5799501975377433521
+    second: ground sprites_28
+  - first:
+      213: -4880254851598189590
+    second: ground sprites_29
+  - first:
+      213: -6575612888738366949
+    second: ground sprites_30
+  - first:
+      213: -2410171130428642065
+    second: ground sprites_31
+  - first:
+      213: 4786596004065474533
+    second: ground sprites_32
+  - first:
+      213: 1158388198288709476
+    second: ground sprites_33
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,12 +143,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -73,9 +175,42 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: ground sprites_10
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1b845137f4985490800000000000000
+      internalID: -7757286568740222179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
