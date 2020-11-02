@@ -126,6 +126,9 @@ public class Player : MonoBehaviour
         {
             Vector2 jumpVelocityToAdd = new Vector2(0f, jumpSpeed);
             myRigidBody.velocity += jumpVelocityToAdd;
+
+            //Play Jump Sound FX
+            SoundManager.PlaySound(SoundManager.Sound.JumpFX, Random.Range(0.85f, 1.0f));
         }
     }
 

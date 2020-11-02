@@ -13,6 +13,7 @@ public static class SoundManager
         MenuPress,
         DashFX,
         RunFX,
+        JumpFX,
     }
 
     private static Dictionary<Sound, float> soundTimerDictionary;
