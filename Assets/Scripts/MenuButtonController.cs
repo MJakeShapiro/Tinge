@@ -32,6 +32,7 @@ public class MenuButtonController : MonoBehaviour {
 					}
 				}
 				keyDown = true;
+				SoundManager.PlaySound(SoundManager.Sound.SwapButton, 3f);
 			}
 		}else{
 			keyDown = false;

@@ -18,6 +18,7 @@ public class MenuButton : MonoBehaviour
 			if(Input.GetAxis ("Submit") == 1){
 				animator.SetBool ("pressed", true);
 			}else if (animator.GetBool ("pressed")){
+				SoundManager.PlaySound(SoundManager.Sound.MenuPress, 0.75f);
 				animator.SetBool ("pressed", false);
 				animatorFunctions.disableOnce = true;
 			}
