@@ -33,7 +33,11 @@ public class Player : MonoBehaviour
     float dashTime;
     float dashCooldown = 0.0f;
 
-
+    //Initialize soundTimerDictionary
+    private void Awake()
+    {
+        SoundManager.Initialize();
+    }
 
     void Start()
     {
@@ -60,9 +64,27 @@ public class Player : MonoBehaviour
     private void DirectionSet()
     {
         if (CrossPlatformInputManager.GetAxis("Horizontal") > 0.0f)
+        {
             direction = Direction.right;
+
+            //Play running FX only when player is touching the ground
+            if (boxCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
+            {
+                //Play Run Sound FX
+                SoundManager.PlaySound(SoundManager.Sound.RunFX, Random.Range(0.75f, 1f));
+            }
+        }
         if (CrossPlatformInputManager.GetAxis("Horizontal") < 0.0f)
+        {
             direction = Direction.left;
+
+            if (boxCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
+            {
+                //Play Run Sound FX
+                SoundManager.PlaySound(SoundManager.Sound.RunFX, Random.Range(0.75f, 1f));
+            }
+            
+        }
         //if (CrossPlatformInputManager.GetAxis("Vertical") > 0.0f)
         //    direction = Direction.up;
         //if (CrossPlatformInputManager.GetAxis("Vertical") < 0.0f)
