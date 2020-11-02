@@ -127,6 +127,10 @@ public class Player : MonoBehaviour
                     dashTime = TOTAL_DASH_TIME;
                     myRigidBody.gravityScale = 0.0f;
                     myRigidBody.velocity = new Vector2(CrossPlatformInputManager.GetAxis("Horizontal") * dashSpeed, CrossPlatformInputManager.GetAxis("Vertical") * dashSpeed);
+
+                    //Play Dash Sound FX
+                    SoundManager.PlaySound(SoundManager.Sound.DashFX, Random.Range(0.7f, 1.2f));
+
                     DashEffectToDestroy = Instantiate(dashEffect, transform.position, Quaternion.identity);
                     Destroy(DashEffectToDestroy, 0.2f);
                 }
@@ -138,6 +142,10 @@ public class Player : MonoBehaviour
                         dashTime = TOTAL_DASH_TIME;
                         myRigidBody.gravityScale = 0.0f;
                         myRigidBody.velocity = Vector2.right * dashSpeed;
+
+                        //Play Dash Sound FX
+                        SoundManager.PlaySound(SoundManager.Sound.DashFX, Random.Range(0.7f, 1.2f));
+
                         DashEffectToDestroy = Instantiate(dashEffect, transform.position, Quaternion.identity);
                         Destroy(DashEffectToDestroy, 0.2f);
                     }
@@ -147,6 +155,10 @@ public class Player : MonoBehaviour
                         dashTime = TOTAL_DASH_TIME;
                         myRigidBody.gravityScale = 0.0f;
                         myRigidBody.velocity = Vector2.left * dashSpeed;
+
+                        //Play Dash Sound FX
+                        SoundManager.PlaySound(SoundManager.Sound.DashFX, Random.Range(0.7f, 1.2f));
+
                         DashEffectToDestroy = Instantiate(dashEffect, transform.position, Quaternion.identity);
                         Destroy(DashEffectToDestroy, 0.2f);
                     }
