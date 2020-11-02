@@ -10,6 +10,7 @@ public static class SoundManager
     {
         SwapButton,
         MenuPress,
+        DashFX,
     }
 
     public static void PlaySound(Sound sound, float pLevel)
@@ -18,6 +19,7 @@ public static class SoundManager
         AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
         audioSource.pitch = pLevel;
         audioSource.PlayOneShot(GetAudioClip(sound));
+        UnityEngine.Object.Destroy(soundGameObject, 0.8f);
     }
 
     public static void PlaySound(Sound sound)
