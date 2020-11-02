@@ -385,7 +385,7 @@ PrefabInstance:
     - target: {fileID: 2888614653234167914, guid: 8f93ef593d4f1ed4783b49bf40bfc801, type: 3}
       propertyPath: nextScene
       value: 
-      objectReference: {fileID: 102900000, guid: 30b83fc0695be5c4b97964c0f8f71b8a, type: 3}
+      objectReference: {fileID: 102900000, guid: a59972b747a62a04cbdbe0851c92d87a, type: 3}
     - target: {fileID: 2888614653234167919, guid: 8f93ef593d4f1ed4783b49bf40bfc801, type: 3}
       propertyPath: m_Name
       value: TransitionPoint (City 7)

@@ -150,7 +150,7 @@ MonoBehaviour:
   jumpSpeed: 17
   climbSpeed: 5
   dashEffect: {fileID: 5502138560353755212, guid: 78ad0729f466cd141b88d6436c1a14cb, type: 3}
-  dashSpeed: 17
+  dashSpeed: 20
   TOTAL_DASH_TIME: 0.25
   MIN_DASH_COOLDOWN: 0.5
   diagonalDash: 0
