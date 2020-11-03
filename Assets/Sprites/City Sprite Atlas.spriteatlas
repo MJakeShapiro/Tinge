@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: City Sprite Atlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 8320b91a1ff57fe46b3a3ea2d4b86539, type: 3}
+    - {fileID: 2800000, guid: 4484a7aba55a27247a213dc8d19edd82, type: 3}
+    - {fileID: 2800000, guid: 488ba15a083562047aa1b53c715aba8a, type: 3}
+    totalSpriteSurfaceArea: 85214
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 1615000613740889636, guid: 8320b91a1ff57fe46b3a3ea2d4b86539, type: 3}
+  - {fileID: 4686007120265471877, guid: 8320b91a1ff57fe46b3a3ea2d4b86539, type: 3}
+  - {fileID: -1992539865721065680, guid: 8320b91a1ff57fe46b3a3ea2d4b86539, type: 3}
+  - {fileID: 529061540694942451, guid: 8320b91a1ff57fe46b3a3ea2d4b86539, type: 3}
+  - {fileID: 6682534792974091473, guid: 8320b91a1ff57fe46b3a3ea2d4b86539, type: 3}
+  - {fileID: -1357750770123457072, guid: 8320b91a1ff57fe46b3a3ea2d4b86539, type: 3}
+  - {fileID: -3139911534279973716, guid: 8320b91a1ff57fe46b3a3ea2d4b86539, type: 3}
+  - {fileID: 2479812851089952687, guid: 8320b91a1ff57fe46b3a3ea2d4b86539, type: 3}
+  - {fileID: -2600679834280535211, guid: 8320b91a1ff57fe46b3a3ea2d4b86539, type: 3}
+  - {fileID: -1578105675496681728, guid: 8320b91a1ff57fe46b3a3ea2d4b86539, type: 3}
+  - {fileID: 5225769821393955659, guid: 8320b91a1ff57fe46b3a3ea2d4b86539, type: 3}
+  - {fileID: -2044069043941993874, guid: 8320b91a1ff57fe46b3a3ea2d4b86539, type: 3}
+  - {fileID: 3616410710020311940, guid: 8320b91a1ff57fe46b3a3ea2d4b86539, type: 3}
+  - {fileID: 5224771523928451068, guid: 8320b91a1ff57fe46b3a3ea2d4b86539, type: 3}
+  - {fileID: -1437739327303175994, guid: 8320b91a1ff57fe46b3a3ea2d4b86539, type: 3}
+  - {fileID: 6103140571217409417, guid: 8320b91a1ff57fe46b3a3ea2d4b86539, type: 3}
+  - {fileID: 507072814054171583, guid: 8320b91a1ff57fe46b3a3ea2d4b86539, type: 3}
+  - {fileID: -2071643159347509276, guid: 8320b91a1ff57fe46b3a3ea2d4b86539, type: 3}
+  - {fileID: 3718299316348199318, guid: 488ba15a083562047aa1b53c715aba8a, type: 3}
+  - {fileID: -92115015825897824, guid: 488ba15a083562047aa1b53c715aba8a, type: 3}
+  - {fileID: 2339441204619450494, guid: 488ba15a083562047aa1b53c715aba8a, type: 3}
+  - {fileID: -7757286568740222179, guid: 4484a7aba55a27247a213dc8d19edd82, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - citySprites_14
+  - citySprites_15
+  - citySprites_16
+  - citySprites_17
+  - citySprites_10
+  - citySprites_11
+  - citySprites_12
+  - citySprites_13
+  - citySprites_9
+  - citySprites_8
+  - citySprites_5
+  - citySprites_4
+  - citySprites_7
+  - citySprites_6
+  - citySprites_1
+  - citySprites_0
+  - citySprites_3
+  - citySprites_2
+  - Electric Fence (Open Sourced)_0
+  - Electric Fence (Open Sourced)_1
+  - Electric Fence (Open Sourced)_2
+  - ground sprites_10
+  m_Tag: City Sprite Atlas
+  m_IsVariant: 0

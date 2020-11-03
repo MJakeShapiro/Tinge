@@ -40,16 +40,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
+    locked: 1
   - name: BackGround
     uniqueID: 2185390359
-    locked: 0
+    locked: 1
+  - name: Behind Ladder
+    uniqueID: 3496046961
+    locked: 1
   - name: Ladder
     uniqueID: 1056341657
-    locked: 0
+    locked: 1
   - name: Player
     uniqueID: 2792150565
-    locked: 0
+    locked: 1
   - name: ForeGround
     uniqueID: 2094168013
-    locked: 0
+    locked: 1
