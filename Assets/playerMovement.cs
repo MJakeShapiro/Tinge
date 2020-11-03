@@ -38,7 +38,26 @@ public class playerMovement : MonoBehaviour
 
         Jump();
         Climb();
+        Tornado();
+        Slide();
 
+        
+
+        
+
+
+    }
+
+    private void FixedUpdate()
+    {
+        if (!isSliding)
+        {
+            rigidBody.velocity = new Vector2(dirX * runSpeed, rigidBody.velocity.y);
+        }
+    }
+
+    void Slide()
+    {
         if (Input.GetKeyDown(KeyCode.Z))
         {
             StartCoroutine(Dash(-1f));
@@ -48,14 +67,18 @@ public class playerMovement : MonoBehaviour
         {
             StartCoroutine(Dash(1f));
         }
-
     }
 
-    private void FixedUpdate()
+    void Tornado()
     {
-        if (!isSliding)
+        if (capsuleCollider.IsTouchingLayers(LayerMask.GetMask("Tornado")))
         {
-            rigidBody.velocity = new Vector2(dirX * runSpeed, rigidBody.velocity.y);
+            if (dirX > 0)
+                StartCoroutine(Dash(-1f));
+            else if (dirX < 0)
+            {
+                StartCoroutine(Dash(1f));
+            }
         }
     }
 
