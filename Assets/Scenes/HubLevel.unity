@@ -174,6 +174,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2888614653234167914, guid: 8f93ef593d4f1ed4783b49bf40bfc801, type: 3}
+      propertyPath: nextScene
+      value: 
+      objectReference: {fileID: 102900000, guid: e1082ba40315bfe4abfda55cd74721ec, type: 3}
     - target: {fileID: 2888614653234167919, guid: 8f93ef593d4f1ed4783b49bf40bfc801, type: 3}
       propertyPath: m_Name
       value: To City1
