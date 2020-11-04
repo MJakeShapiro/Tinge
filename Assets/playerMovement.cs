@@ -41,18 +41,26 @@ public class playerMovement : MonoBehaviour
         Tornado();
         Slide();
 
-        
 
         
+
 
 
     }
 
     private void FixedUpdate()
     {
-        if (!isSliding)
+        run();
+    }
+
+    void run()
+    {
+        if(dirX != 0)
         {
-            rigidBody.velocity = new Vector2(dirX * runSpeed, rigidBody.velocity.y);
+            if (!isSliding)
+            {
+                rigidBody.velocity = new Vector2(dirX * runSpeed, rigidBody.velocity.y);
+            }
         }
     }
 
