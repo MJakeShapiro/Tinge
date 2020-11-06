@@ -1,0 +1,1006 @@
+fileFormatVersion: 2
+guid: e18eff8a4b86e224382b7882da6f04a5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1513305066732365854
+    second: MainCharacterSprite (1)_0
+  - first:
+      213: 1231354542402670459
+    second: MainCharacterSprite (1)_1
+  - first:
+      213: 3522807446542679784
+    second: MainCharacterSprite (1)_2
+  - first:
+      213: 3258957820377001494
+    second: MainCharacterSprite (1)_3
+  - first:
+      213: 6180527237207454841
+    second: MainCharacterSprite (1)_4
+  - first:
+      213: -4512249930876904643
+    second: MainCharacterSprite (1)_5
+  - first:
+      213: -3471320169063276889
+    second: MainCharacterSprite (1)_6
+  - first:
+      213: 2051808823298979396
+    second: MainCharacterSprite (1)_7
+  - first:
+      213: -7240256166554366829
+    second: MainCharacterSprite (1)_8
+  - first:
+      213: -3568653282057093186
+    second: MainCharacterSprite (1)_9
+  - first:
+      213: -8976056170678811016
+    second: MainCharacterSprite (1)_10
+  - first:
+      213: -935359160304818709
+    second: MainCharacterSprite (1)_11
+  - first:
+      213: -117646486171030382
+    second: MainCharacterSprite (1)_12
+  - first:
+      213: -6529475638308890472
+    second: MainCharacterSprite (1)_13
+  - first:
+      213: -7233177575761701166
+    second: MainCharacterSprite (1)_14
+  - first:
+      213: 2819160326325037282
+    second: MainCharacterSprite (1)_15
+  - first:
+      213: -1329699232354759489
+    second: MainCharacterSprite (1)_16
+  - first:
+      213: -4835011610789217577
+    second: MainCharacterSprite (1)_17
+  - first:
+      213: 8058246008760386786
+    second: MainCharacterSprite (1)_18
+  - first:
+      213: 5150757833472334760
+    second: MainCharacterSprite (1)_19
+  - first:
+      213: -2289989203706563143
+    second: MainCharacterSprite (1)_20
+  - first:
+      213: -2797756176290007105
+    second: MainCharacterSprite (1)_21
+  - first:
+      213: 4712824232196572507
+    second: MainCharacterSprite (1)_22
+  - first:
+      213: 6862420093052396034
+    second: MainCharacterSprite (1)_23
+  - first:
+      213: 8971397286140679528
+    second: MainCharacterSprite (1)_24
+  - first:
+      213: 5317189889897441139
+    second: MainCharacterSprite (1)_25
+  - first:
+      213: 8373014840015215094
+    second: MainCharacterSprite (1)_26
+  - first:
+      213: -4595762125449047479
+    second: MainCharacterSprite (1)_27
+  - first:
+      213: 6000440922126293699
+    second: MainCharacterSprite (1)_28
+  - first:
+      213: 2046671956276446818
+    second: MainCharacterSprite (1)_29
+  - first:
+      213: -1698415790338090649
+    second: MainCharacterSprite (1)_30
+  - first:
+      213: -3311317042050702628
+    second: MainCharacterSprite (1)_31
+  - first:
+      213: -2919938361912568796
+    second: MainCharacterSprite (1)_32
+  - first:
+      213: -5181490787310142576
+    second: MainCharacterSprite (1)_33
+  - first:
+      213: 4949072209526117976
+    second: thief_base_left
+  - first:
+      213: 6127212176030357924
+    second: thief_base_front
+  - first:
+      213: -3487722525195307828
+    second: thief_base_right
+  - first:
+      213: 1365110483223823507
+    second: thief_idle_01
+  - first:
+      213: -6825032969955792867
+    second: thief_idle_02
+  - first:
+      213: 8586087346360427368
+    second: thief_idle_03
+  - first:
+      213: 9164634411013436767
+    second: thief_idle_04
+  - first:
+      213: 404050527933342487
+    second: thief_idle_05
+  - first:
+      213: -6664046487920025985
+    second: thief_dash_01
+  - first:
+      213: -4057135684889547668
+    second: thief_dash_02
+  - first:
+      213: -998343759298282695
+    second: thief_dash_03
+  - first:
+      213: -7688217614269528102
+    second: thief_dash_04
+  - first:
+      213: -7057147005855033008
+    second: thief_dash_05
+  - first:
+      213: -1025278461167452155
+    second: thief_dash_06
+  - first:
+      213: 7274454184838198710
+    second: thief_run_01
+  - first:
+      213: -2614918068992460521
+    second: thief_run_02
+  - first:
+      213: 7089141461992747302
+    second: thief_run_03
+  - first:
+      213: -3197775902973920922
+    second: thief_run_04
+  - first:
+      213: 5048082323002518674
+    second: thief_run_05
+  - first:
+      213: -1591835811209397132
+    second: thief_run_06
+  - first:
+      213: -8094646124328775546
+    second: thief_slide_start
+  - first:
+      213: -7143203120229131281
+    second: thief_slide_mid
+  - first:
+      213: -4188177996447865343
+    second: thief_slide_jump_01
+  - first:
+      213: 608333130935714306
+    second: thief_slide_jump_02
+  - first:
+      213: 2314844867761514289
+    second: thief_slide_jump_03
+  - first:
+      213: 3675028273420648747
+    second: thief_slide_jump_04
+  - first:
+      213: 3342133190886425832
+    second: thief_jump_01
+  - first:
+      213: -3878685997857598068
+    second: thief_jump_02
+  - first:
+      213: -4976643105958113659
+    second: thief_jump_03
+  - first:
+      213: 2166892946340329256
+    second: thief_jump_04
+  - first:
+      213: -6557866807815097427
+    second: thief_jump_05
+  - first:
+      213: 7671072925094752326
+    second: thief_jump_06
+  - first:
+      213: -4480331525857363742
+    second: thief_jump_07
+  - first:
+      213: -4302292529116246352
+    second: MainCharacterSprite_33
+  - first:
+      213: 2638371242135368591
+    second: MainCharacterSprite_34
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: thief_base_left
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 132
+        width: 15
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 856df8804f2aea440800000000000000
+      internalID: 4949072209526117976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_base_front
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 131
+        width: 23
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a9dcbfb20b380550800000000000000
+      internalID: 6127212176030357924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_base_right
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 132
+        width: 15
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc4fa9297de199fc0800000000000000
+      internalID: -3487722525195307828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_idle_01
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 132
+        width: 15
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 394c7b770c8d1f210800000000000000
+      internalID: 1365110483223823507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_idle_02
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 126
+        width: 20
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d18a475acac9841a0800000000000000
+      internalID: -6825032969955792867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_idle_03
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 132
+        width: 17
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8632a4253f8e72770800000000000000
+      internalID: 8586087346360427368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_idle_04
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 132
+        width: 17
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f55f6c4c0725f2f70800000000000000
+      internalID: 9164634411013436767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_idle_05
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 132
+        width: 15
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 713a6cc70d97b9500800000000000000
+      internalID: 404050527933342487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_dash_01
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 137
+        width: 35
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7e56d0e60d8483a0800000000000000
+      internalID: -6664046487920025985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_dash_02
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 137
+        width: 38
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6ce898179822b7c0800000000000000
+      internalID: -4057135684889547668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_dash_03
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 137
+        width: 41
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93b3c4fe3ab2522f0800000000000000
+      internalID: -998343759298282695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_dash_04
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 137
+        width: 37
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad7409150d6fd4590800000000000000
+      internalID: -7688217614269528102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_dash_05
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 136
+        width: 37
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0599c44403aff0e90800000000000000
+      internalID: -7057147005855033008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_dash_06
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 137
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5004146fbaa75c1f0800000000000000
+      internalID: -1025278461167452155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_run_01
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 71
+        width: 34
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b572261a8d04f460800000000000000
+      internalID: 7274454184838198710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_run_02
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 71
+        width: 35
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71934f4eed1f5bbd0800000000000000
+      internalID: -2614918068992460521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_run_03
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 71
+        width: 37
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 621329c8990b16260800000000000000
+      internalID: 7089141461992747302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_run_04
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 72
+        width: 35
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6697fef32c73f93d0800000000000000
+      internalID: -3197775902973920922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_run_05
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 71
+        width: 35
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29c6e7b70246e0640800000000000000
+      internalID: 5048082323002518674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_run_06
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 70
+        width: 35
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47c3e1c73c9a8e9e0800000000000000
+      internalID: -1591835811209397132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_slide_start
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 67
+        width: 26
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68014e8bc3a0aaf80800000000000000
+      internalID: -8094646124328775546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_slide_mid
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 71
+        width: 39
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: febd744cb9e3edc90800000000000000
+      internalID: -7143203120229131281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_slide_jump_01
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 69
+        width: 33
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1062e995d4a90e5c0800000000000000
+      internalID: -4188177996447865343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_slide_jump_02
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 71
+        width: 31
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 202468e62cb317800800000000000000
+      internalID: 608333130935714306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_slide_jump_03
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 71
+        width: 30
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 137af05842bff1020800000000000000
+      internalID: 2314844867761514289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_slide_jump_04
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 71
+        width: 31
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2141c85eb2500330800000000000000
+      internalID: 3675028273420648747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_jump_01
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 2
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e404d20e64a16e20800000000000000
+      internalID: 3342133190886425832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_jump_02
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 2
+        width: 23
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c859a6692a32c2ac0800000000000000
+      internalID: -3878685997857598068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_jump_03
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 5
+        width: 23
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58e487766796feab0800000000000000
+      internalID: -4976643105958113659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_jump_04
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 14
+        width: 31
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8273aec67a9521e10800000000000000
+      internalID: 2166892946340329256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_jump_05
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 10
+        width: 35
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da33bd322e6cdf4a0800000000000000
+      internalID: -6557866807815097427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_jump_06
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 7
+        width: 30
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 640b36aae20257a60800000000000000
+      internalID: 7671072925094752326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_jump_07
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 2
+        width: 27
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e8b94d073aa2d1c0800000000000000
+      internalID: -4480331525857363742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
