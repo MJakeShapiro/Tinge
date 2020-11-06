@@ -11,6 +11,11 @@ public class Player : MonoBehaviour
     [SerializeField] float jumpSpeed = 5f;
     [SerializeField] float climbSpeed = 5f;
 
+    
+    float slideDistance = 10f;
+    bool isSliding = false;
+    
+
     [Header("Dash")]
     [SerializeField] GameObject dashEffect;
     [SerializeField] float dashSpeed = 50.0f;
@@ -23,7 +28,9 @@ public class Player : MonoBehaviour
 
     Rigidbody2D myRigidBody;
     BoxCollider2D boxCollider;
+    CapsuleCollider2D capsuleCollider;
     float gravityScaleStart;
+    float dirX;
     Direction direction = Direction.right;
 
     // Private Dash Variables
@@ -43,22 +50,48 @@ public class Player : MonoBehaviour
     {
         myRigidBody = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
+        capsuleCollider = GetComponent<CapsuleCollider2D>();
         gravityScaleStart = myRigidBody.gravityScale;
     }
 
     // Update is called once per frame
     void Update()
     {
+        dirX = Input.GetAxisRaw("Horizontal");
+
         if (GameManager.Instance.changingScenes)
             return;
         DirectionSet();
         Dash();
         DashCounter();
+
+        meetTornado();
         if (isDashing)  // Briefly disable player controls if isDashing
             return;
-        Run();
+        
         Climb();
         Jump();
+        //Slide();
+    }
+
+    private void FixedUpdate()
+    {
+        if (isDashing)
+            return;
+        Run();
+    }
+
+    void meetTornado()
+    {
+        if (capsuleCollider.IsTouchingLayers(LayerMask.GetMask("Tornado")))
+        {
+            if (dirX > 0)
+                StartCoroutine(Sliding(-1f));
+            else if (dirX < 0)
+            {
+                StartCoroutine(Sliding(1f));
+            }
+        }
     }
 
     private void DirectionSet()
@@ -93,9 +126,11 @@ public class Player : MonoBehaviour
 
     private void Run()
     {
-        float controlThrow = CrossPlatformInputManager.GetAxis("Horizontal");
-        Vector2 playerVelocity = new Vector2(runSpeed * controlThrow, myRigidBody.velocity.y);
-        myRigidBody.velocity = playerVelocity;
+        if (dirX != 0)
+        {
+                myRigidBody.velocity = new Vector2(dirX * runSpeed, myRigidBody.velocity.y);
+            
+        }
     }
 
     private void Climb()
@@ -241,4 +276,34 @@ public class Player : MonoBehaviour
         myRigidBody.gravityScale = 0.0f;
         GameManager.Instance.ReloadScene();
     }
+
+    /*
+    void Slide()
+    {
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            StartCoroutine(Sliding(-1f));
+        }
+
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            StartCoroutine(Sliding(1f));
+        }
+    }
+    */
+
+    IEnumerator Sliding(float direction)
+    {
+        isSliding = true;
+        myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, 0f);
+        myRigidBody.AddForce(new Vector2(slideDistance * direction, 0f), ForceMode2D.Impulse);
+        float gravity = myRigidBody.gravityScale;
+        myRigidBody.gravityScale = 0;
+        yield return new WaitForSeconds(0.4f);
+        isSliding = false;
+        myRigidBody.gravityScale = gravity;
+    }
+    
 }
+
+
