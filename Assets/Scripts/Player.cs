@@ -5,7 +5,8 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class Player : MonoBehaviour
 {
-    
+
+    #region Properties
     [Header("Movement")]
     [SerializeField] float runSpeed = 5f;
     [SerializeField] float jumpSpeed = 5f;
@@ -17,6 +18,10 @@ public class Player : MonoBehaviour
     [SerializeField] float TOTAL_DASH_TIME = 0.1f;
     [SerializeField] float MIN_DASH_COOLDOWN = 0.5f;
 
+    [Header("Smash")]
+    [SerializeField] float smashSpeed = 50.0f;
+    [SerializeField] float MIN_SMASH_COOLDOWN = 0.5f;
+
     [Header("PlayTesting")]
     [SerializeField] bool diagonalDash;
     [SerializeField] bool variableDashLength;
@@ -25,7 +30,7 @@ public class Player : MonoBehaviour
     BoxCollider2D boxCollider;
     float gravityScaleStart;
     Direction direction;
-    public Animator animator;
+    //public Animator animator;
     GameObject p;
     SpriteRenderer player;
 
@@ -36,11 +41,22 @@ public class Player : MonoBehaviour
     float dashTime;
     float dashCooldown = 0.0f;
 
+    // Private Smash Variables
+    bool canSmash = true;
+    bool isSmashing = false;
+    float smashTime;
+    float smashCooldown = 0.0f;
+    float TOTAL_SMASH_TIME;
+
+    #endregion Properties
+
+    #region Initialization
     //Initialize soundTimerDictionary
     private void Awake()
     {
         SoundManager.Initialize();
         player = GetComponent<SpriteRenderer>();
+        TOTAL_SMASH_TIME = TOTAL_SMASH_TIME / 2;
     }
 
     void Start()
@@ -49,6 +65,8 @@ public class Player : MonoBehaviour
         boxCollider = GetComponent<BoxCollider2D>(); 
         gravityScaleStart = myRigidBody.gravityScale;
     }
+
+    #endregion Initialization
 
     // Update is called once per frame
     void Update()
@@ -65,6 +83,7 @@ public class Player : MonoBehaviour
         Jump();
     }
 
+    #region Movement
     private void DirectionSet()
     {
         if (CrossPlatformInputManager.GetAxis("Horizontal") > 0.0f)
@@ -97,12 +116,14 @@ public class Player : MonoBehaviour
         //    direction = Direction.down;
     }
 
+
+
     private void Run()
     {
         float controlThrow = CrossPlatformInputManager.GetAxis("Horizontal");
         Vector2 playerVelocity = new Vector2(runSpeed * controlThrow, myRigidBody.velocity.y);
         myRigidBody.velocity = playerVelocity;
-        animator.SetFloat("Speed", Mathf.Abs(controlThrow));
+        //animator.SetFloat("Speed", Mathf.Abs(controlThrow));
     }
 
     private void Climb()
@@ -144,7 +165,11 @@ public class Player : MonoBehaviour
         }
         
     }
+    #endregion Movement
 
+    #region Abilities
+
+    #region Dash
     /// <summary>
     /// Dashes player according to dashSpeed. DiagonalDash option.
     /// </summary>
@@ -155,7 +180,7 @@ public class Player : MonoBehaviour
             //animator.SetTrigger("Dash");
             StartCoroutine(dashTimer(.4f));
            
-            if (canDash)
+            if (canDash && !isDashing)
             {
                 GameObject DashEffectToDestroy;
 
@@ -203,12 +228,6 @@ public class Player : MonoBehaviour
                         DashEffectToDestroy = Instantiate(dashEffect, transform.position, Quaternion.identity);
                         Destroy(DashEffectToDestroy, 0.2f);
                     }
-                            //case Direction.up:
-                            //    myRigidBody.velocity = Vector2.up * dashSpeed;
-                            //    break;
-                            //case Direction.down:
-                            //    myRigidBody.velocity = Vector2.down * dashSpeed;
-                            //    break;
                 }
             }
         }
@@ -225,7 +244,7 @@ public class Player : MonoBehaviour
             if (dashTime <= 0.0f || (variableDashLength && CrossPlatformInputManager.GetButtonUp("Dash")))
             {
                 myRigidBody.velocity = Vector2.zero;
-                myRigidBody.gravityScale = 4.0f;
+                myRigidBody.gravityScale = 1.0f;
                 isDashing = false;
                 canDash = false;
                 dashCooldown = MIN_DASH_COOLDOWN;
@@ -248,17 +267,95 @@ public class Player : MonoBehaviour
         }
     }
 
+    #endregion Dash
+
+    #region Smash
+
+    public void Smash()
+    {
+        if (CrossPlatformInputManager.GetButtonDown("Smash"))
+        {
+            //animator.SetTrigger("Smash");
+            //StartCoroutine(smashTimer(.4f));
+
+            if (canSmash)
+            {
+                //GameObject DashEffectToDestroy;
+                if (direction == Direction.right)
+                {
+                    isSmashing = true;
+                    smashTime = TOTAL_SMASH_TIME;
+                    myRigidBody.gravityScale = 0.0f;
+                    myRigidBody.velocity = Vector2.right * smashSpeed;
+
+                    //DashEffectToDestroy = Instantiate(dashEffect, transform.position, Quaternion.identity);
+                    //Destroy(DashEffectToDestroy, 0.2f);
+                }
+                else if (direction == Direction.left)
+                {
+                    isSmashing = true;
+                    smashTime = TOTAL_SMASH_TIME;
+                    myRigidBody.gravityScale = 0.0f;
+                    myRigidBody.velocity = Vector2.left * smashSpeed;
+
+                    //DashEffectToDestroy = Instantiate(dashEffect, transform.position, Quaternion.identity);
+                    //Destroy(DashEffectToDestroy, 0.2f);
+                }
+                if (direction == Direction.down)
+                {
+                    isSmashing = true;
+                    myRigidBody.gravityScale = 0.0f;
+                    myRigidBody.velocity = Vector2.down * smashSpeed;
+                }
+            }
+        }
+    }
+
+    public void SmashCounter()
+    {
+        if (isSmashing)
+        {
+            if (boxCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
+                
+            if (smashTime <= 0.0f)
+            {
+                myRigidBody.velocity = Vector2.zero;
+                myRigidBody.gravityScale = 4.0f;
+                isSmashing = false;
+                canSmash = false;
+                smashCooldown = MIN_SMASH_COOLDOWN;
+            }
+            else
+            {
+                smashTime -= Time.deltaTime;
+            }
+        }
+        if (!canSmash)
+            smashCooldown -= Time.deltaTime;
+        if (smashCooldown <= 0.0f)
+        {
+            if (!boxCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
+            {
+                canSmash = true;
+            }
+        }
+    }
+
+    #endregion Smash
+
+    #endregion Abilities
+
     IEnumerator jumpTimer(float time)
     {
-        animator.SetBool("isJumping", true);
+        //animator.SetBool("isJumping", true);
         yield return new WaitForSeconds(time);
-        animator.SetBool("isJumping", false);
+        //animator.SetBool("isJumping", false);
     }
     IEnumerator dashTimer(float time)
     {
-        animator.SetBool("isDashing", true);
+        //animator.SetBool("isDashing", true);
         yield return new WaitForSeconds(time);
-        animator.SetBool("isDashing", false);
+        //animator.SetBool("isDashing", false);
     }
 
     /// <summary>
