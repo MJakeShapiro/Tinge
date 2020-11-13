@@ -24,7 +24,10 @@ public class Player : MonoBehaviour
     Rigidbody2D myRigidBody;
     BoxCollider2D boxCollider;
     float gravityScaleStart;
-    Direction direction = Direction.right;
+    Direction direction;
+    public Animator animator;
+    GameObject p;
+    SpriteRenderer player;
 
     // Private Dash Variables
     bool canDash = true;
@@ -37,12 +40,13 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         SoundManager.Initialize();
+        player = GetComponent<SpriteRenderer>();
     }
 
     void Start()
     {
         myRigidBody = GetComponent<Rigidbody2D>();
-        boxCollider = GetComponent<BoxCollider2D>();
+        boxCollider = GetComponent<BoxCollider2D>(); 
         gravityScaleStart = myRigidBody.gravityScale;
     }
 
@@ -66,6 +70,7 @@ public class Player : MonoBehaviour
         if (CrossPlatformInputManager.GetAxis("Horizontal") > 0.0f)
         {
             direction = Direction.right;
+            player.flipX = false;
 
             //Play running FX only when player is touching the ground
             if (boxCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
@@ -77,6 +82,7 @@ public class Player : MonoBehaviour
         if (CrossPlatformInputManager.GetAxis("Horizontal") < 0.0f)
         {
             direction = Direction.left;
+            player.flipX = true;
 
             if (boxCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
             {
@@ -96,6 +102,7 @@ public class Player : MonoBehaviour
         float controlThrow = CrossPlatformInputManager.GetAxis("Horizontal");
         Vector2 playerVelocity = new Vector2(runSpeed * controlThrow, myRigidBody.velocity.y);
         myRigidBody.velocity = playerVelocity;
+        animator.SetFloat("Speed", Mathf.Abs(controlThrow));
     }
 
     private void Climb()
@@ -124,12 +131,18 @@ public class Player : MonoBehaviour
 
         if (CrossPlatformInputManager.GetButtonDown("Jump"))
         {
+            // animator.SetTrigger("Jump");
+
+            
             Vector2 jumpVelocityToAdd = new Vector2(0f, jumpSpeed);
             myRigidBody.velocity += jumpVelocityToAdd;
 
             //Play Jump Sound FX
             SoundManager.PlaySound(SoundManager.Sound.JumpFX, Random.Range(0.85f, 1.0f));
+            StartCoroutine(jumpTimer(.80f));
+
         }
+        
     }
 
     /// <summary>
@@ -139,6 +152,9 @@ public class Player : MonoBehaviour
     {
         if (CrossPlatformInputManager.GetButtonDown("Dash"))
         {
+            //animator.SetTrigger("Dash");
+            StartCoroutine(dashTimer(.4f));
+           
             if (canDash)
             {
                 GameObject DashEffectToDestroy;
@@ -230,6 +246,19 @@ public class Player : MonoBehaviour
             }
 
         }
+    }
+
+    IEnumerator jumpTimer(float time)
+    {
+        animator.SetBool("isJumping", true);
+        yield return new WaitForSeconds(time);
+        animator.SetBool("isJumping", false);
+    }
+    IEnumerator dashTimer(float time)
+    {
+        animator.SetBool("isDashing", true);
+        yield return new WaitForSeconds(time);
+        animator.SetBool("isDashing", false);
     }
 
     /// <summary>
