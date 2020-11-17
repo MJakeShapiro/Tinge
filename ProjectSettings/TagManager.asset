@@ -17,7 +17,7 @@ TagManager:
   - Ladder
   - Player
   - Tornado
-  - 
+  - Rubble
   - 
   - 
   - 
@@ -52,4 +52,7 @@ TagManager:
     locked: 0
   - name: ForeGround
     uniqueID: 2094168013
+    locked: 0
+  - name: Rubble
+    uniqueID: 4082420573
     locked: 0
