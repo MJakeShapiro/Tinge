@@ -16,7 +16,7 @@ public class FireRubble : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("Fire", 0f, 4f);
+        InvokeRepeating("Fire", 0f, 6f);
     }
 
     private void Fire()

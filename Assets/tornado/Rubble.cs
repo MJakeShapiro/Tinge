@@ -11,13 +11,14 @@ public class Rubble : MonoBehaviour
     private void OnEnable()
     {
         StartCoroutine(trig());
-        Invoke("Destroy", 1.5f);
+        Invoke("Destroy", 3f);
     }
 
     // Start is called before the first frame update
     void Start()
     {
         circleCollider = GetComponent<CircleCollider2D>();
+        
         moveSpeed = 5f;
         circleCollider.isTrigger = false;
     }
@@ -30,7 +31,7 @@ public class Rubble : MonoBehaviour
 
     IEnumerator trig()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.6f);
         circleCollider.isTrigger = true;
     }
 
