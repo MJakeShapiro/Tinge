@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
 
     public bool changingScenes = false;
 
+    public LayerMask ground;
+
     //setup of singleton entity
     private static GameManager instance;
     public static GameManager Instance
