@@ -18,8 +18,8 @@ EditorBuildSettings:
     path: Assets/Scenes/TestScenes/SceneChanger/Scene2.unity
     guid: 98eee867b63d39042abd4b7eae87dec1
   - enabled: 1
-    path: Assets/Scenes/City 3.unity
-    guid: 730a3110970a7834ca9129000a937ab3
+    path: Assets/Scenes/HubLevel.unity
+    guid: 08da221db8fc91f46bc8bc55ccb422f5
   - enabled: 1
     path: Assets/Scenes/City 1.unity
     guid: e1082ba40315bfe4abfda55cd74721ec
@@ -27,14 +27,17 @@ EditorBuildSettings:
     path: Assets/Scenes/City 2.unity
     guid: 46819c0eb38ac674b95f1bf1ba74491b
   - enabled: 1
+    path: Assets/Scenes/City 3.unity
+    guid: 730a3110970a7834ca9129000a937ab3
+  - enabled: 1
     path: Assets/Scenes/City 4.unity
     guid: ea71ad41a16de2d4f992741235bd0c4a
   - enabled: 1
-    path: Assets/Scenes/City 6.unity
-    guid: 30b83fc0695be5c4b97964c0f8f71b8a
-  - enabled: 1
     path: Assets/Scenes/City 5.unity
     guid: 30db2f4578d802041a41cb1fc303661a
+  - enabled: 1
+    path: Assets/Scenes/City 6.unity
+    guid: 30b83fc0695be5c4b97964c0f8f71b8a
   - enabled: 1
     path: Assets/Scenes/City 7.unity
     guid: a59972b747a62a04cbdbe0851c92d87a
@@ -44,4 +47,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/City 9.unity
     guid: 04445c329f0ccfe4f8477e3679e791f4
+  - enabled: 1
+    path: Assets/Scenes/City 10.unity
+    guid: 1602ba7d1b0e35a49adc558185c9a4c4
+  - enabled: 1
+    path: Assets/Scenes/City 11.unity
+    guid: 78d3fd073bceed241a341b589a4e48d3
+  - enabled: 1
+    path: Assets/Scenes/City 12.unity
+    guid: a3090d21719354d4497b1d1ce76f2b88
+  - enabled: 1
+    path: Assets/Scenes/City 13.unity
+    guid: a8fa4f5e43de32b4385b1a2e40f54d95
   m_configObjects: {}
