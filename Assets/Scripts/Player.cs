@@ -69,15 +69,15 @@ public class Player : MonoBehaviour
         DashCounter();
         if (isDashing)  // Briefly disable player controls if isDashing
             return;
-        //Run();
+        Run();
         Climb();
         Jump();
-        Tornado();
+        //Tornado();
     }
 
     private void FixedUpdate()
     {
-        newRun();
+        //newRun();
     }
 
     private void DirectionSet()
