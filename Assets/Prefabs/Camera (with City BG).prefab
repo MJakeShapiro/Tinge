@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3457556525704752455}
   - component: {fileID: 2801649905219831004}
   m_Layer: 0
-  m_Name: Camera (with City Background)
+  m_Name: Camera (with City BG)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

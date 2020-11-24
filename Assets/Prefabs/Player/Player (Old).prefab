@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7994946315374802966}
   - component: {fileID: 7994946315374802967}
   m_Layer: 10
-  m_Name: Player
+  m_Name: Player (Old)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1502816731
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1f58bbab7671b49dc8e46ca864e2de96, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -148,12 +148,14 @@ MonoBehaviour:
   runSpeed: 10
   jumpSpeed: 30
   climbSpeed: 10
+  slideDistance: 15
   dashEffect: {fileID: 5502138560353755212, guid: 78ad0729f466cd141b88d6436c1a14cb, type: 3}
   dashSpeed: 40
   TOTAL_DASH_TIME: 0.15
   MIN_DASH_COOLDOWN: 0.5
   diagonalDash: 0
   variableDashLength: 0
+  animator: {fileID: 0}
 --- !u!70 &7994946315374802967
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

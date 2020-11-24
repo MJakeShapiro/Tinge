@@ -265,7 +265,7 @@ GameObject:
   - component: {fileID: 4519840764518284987}
   - component: {fileID: 3536826154347398222}
   m_Layer: 10
-  m_Name: Player (Larger) (with Camera & Sewer BG)
+  m_Name: Player(with Sewer BG (Placholder))
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -399,6 +399,7 @@ MonoBehaviour:
   runSpeed: 7
   jumpSpeed: 15
   climbSpeed: 5
+  slideDistance: 15
   dashEffect: {fileID: 5502138560353755212, guid: 78ad0729f466cd141b88d6436c1a14cb, type: 3}
   dashSpeed: 20
   TOTAL_DASH_TIME: 0.25
