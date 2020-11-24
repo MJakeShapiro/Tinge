@@ -24,7 +24,7 @@ public class Explodable : MonoBehaviour
     public ShatterType shatterType;
     public List<GameObject> fragments = new List<GameObject>();
     private List<List<Vector2>> polygons = new List<List<Vector2>>();
-   
+
     /// <summary>
     /// Creates fragments if necessary and destroys original gameobject
     /// </summary>
@@ -174,4 +174,6 @@ public class Explodable : MonoBehaviour
             }
         }
     }
+
+
 }

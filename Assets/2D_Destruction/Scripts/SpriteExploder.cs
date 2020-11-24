@@ -289,7 +289,10 @@ public static class SpriteExploder {
         //Create and Add Rigidbody
         Rigidbody2D rigidbody = piece.AddComponent<Rigidbody2D>();
         rigidbody.velocity = origVelocity;
+        rigidbody.mass = 0;
 
+        //Add destruction script
+        piece.AddComponent<FragmentDestroy>();
 
 
         return piece;

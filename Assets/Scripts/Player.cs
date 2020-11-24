@@ -24,6 +24,7 @@ public class Player : MonoBehaviour
     [SerializeField] float MIN_SMASH_COOLDOWN = 0.5f;
     [SerializeField] Transform leftSmashPos;
     [SerializeField] Transform rightSmashPos;
+    [SerializeField] Transform downSmashPos;
     [SerializeField] float checkRadius;
 
     [Header("PlayTesting")]
@@ -156,7 +157,7 @@ public class Player : MonoBehaviour
 
     private void Jump()
     {
-        if (!boxCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
+        if (!boxCollider.IsTouchingLayers(LayerMask.GetMask("Ground")) && !boxCollider.IsTouchingLayers(LayerMask.GetMask("Smashable")))
         {
             return;
         }
@@ -290,8 +291,6 @@ public class Player : MonoBehaviour
 
             if (canSmash && !isSmashing)
             {
-                Debug.Log("SMASH");
-                Debug.Log(TOTAL_SMASH_TIME);
                 if (direction == Direction.right)
                 {
                     isSmashing = true;
@@ -323,6 +322,8 @@ public class Player : MonoBehaviour
     {
         if (isSmashing)
         {
+           
+            Collider2D[] smashablesHit = null;
             // If player collides with the ground while smashing down
             if ((smashDirection == SmashDirection.down) && boxCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
             {
@@ -333,12 +334,14 @@ public class Player : MonoBehaviour
                 canSmash = false;
                 smashCooldown = MIN_SMASH_COOLDOWN;
             }
-            // Made seperate in case player is smashing to the side while on the ground
+
+
             // If player collides with a wall while smashing left or right
             else
             {
-                if(smashDirection == SmashDirection.left && Physics2D.OverlapCircle(leftSmashPos.position, checkRadius, LayerMask.NameToLayer("Ground")))
+                if(smashDirection == SmashDirection.left && Physics2D.OverlapCircle(leftSmashPos.position, checkRadius, GameManager.Instance.ground))
                 {
+                    Debug.Log("HERE");
                     myRigidBody.velocity = Vector2.zero;
                     myRigidBody.gravityScale = 1.0f;
                     isSmashing = false;
@@ -346,7 +349,7 @@ public class Player : MonoBehaviour
                     smashCooldown = MIN_SMASH_COOLDOWN;
                 }
                 // Made seperate in case player smashes with their back to a wall
-                else if(smashDirection == SmashDirection.right && Physics2D.OverlapCircle(rightSmashPos.position, checkRadius, LayerMask.NameToLayer("Ground")))
+                else if(smashDirection == SmashDirection.right && Physics2D.OverlapCircle(rightSmashPos.position, checkRadius, GameManager.Instance.ground))
                 {
                     myRigidBody.velocity = Vector2.zero;
                     myRigidBody.gravityScale = 1.0f;
@@ -357,28 +360,36 @@ public class Player : MonoBehaviour
             }
 
             // If player collides with a smashable while smashing down
-            if ((smashDirection == SmashDirection.down) && boxCollider.IsTouchingLayers(LayerMask.GetMask("Smashable")))
+            if ((smashDirection == SmashDirection.down) && Physics2D.OverlapCircle(downSmashPos.position, checkRadius, GameManager.Instance.smashable))
             {
-                    myRigidBody.velocity = Vector2.zero;
-                    myRigidBody.gravityScale = 1.0f;
-                    isSmashing = false;
-                    canSmash = false;
-                    smashCooldown = MIN_SMASH_COOLDOWN;
-                    downSmash = false;
+                smashablesHit = Physics2D.OverlapCircleAll(downSmashPos.position, checkRadius, GameManager.Instance.smashable);
+                myRigidBody.velocity = Vector2.zero;
+                myRigidBody.gravityScale = 1.0f;
+                isSmashing = false;
+                canSmash = false;
+                smashCooldown = MIN_SMASH_COOLDOWN;
             }
             // If player collides with a smashable while smashing left or right
             else
             {
                 // They continue smashing for another 0.1 seconds in order to "smash through"
-                if (smashDirection == SmashDirection.left && Physics2D.OverlapCircle(leftSmashPos.position, checkRadius, LayerMask.NameToLayer("Smashable")))
+                if (smashDirection == SmashDirection.left && Physics2D.OverlapCircle(leftSmashPos.position, checkRadius, GameManager.Instance.smashable))
                 {
+                    smashablesHit = Physics2D.OverlapCircleAll(leftSmashPos.position, checkRadius, GameManager.Instance.smashable);
                     smashTime = 0.1f;
                 }
-                else if(smashDirection == SmashDirection.right && Physics2D.OverlapCircle(rightSmashPos.position, checkRadius, LayerMask.NameToLayer("Smashable")))
+                else if(smashDirection == SmashDirection.right && Physics2D.OverlapCircle(rightSmashPos.position, checkRadius, GameManager.Instance.smashable))
                 {
+                    smashablesHit = Physics2D.OverlapCircleAll(rightSmashPos.position, checkRadius, GameManager.Instance.smashable);
                     smashTime = 0.1f;
                 }   
             }
+            if (smashablesHit != null)
+                for (int i = 0; i < smashablesHit.Length; i++)
+                {
+                    smashablesHit[i].gameObject.GetComponent<Explodable>().explode();
+
+                }
 
             // If player smashes to the side but collides with nothing before smash ends
             if (smashTime <= 0.0f && (smashDirection != SmashDirection.down))
@@ -398,14 +409,24 @@ public class Player : MonoBehaviour
             smashCooldown -= Time.deltaTime;
         if (smashCooldown <= 0.0f)
         {
-            if (boxCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
+            if (boxCollider.IsTouchingLayers(LayerMask.GetMask("Ground")) || boxCollider.IsTouchingLayers(LayerMask.GetMask("Smashable")))
             {
                 canSmash = true;
                 
             }
         }
     }
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(downSmashPos.position, checkRadius);
 
+        Gizmos.DrawWireSphere(leftSmashPos.position, checkRadius);
+
+        Gizmos.DrawWireSphere(rightSmashPos.position, checkRadius);
+
+
+    }
     #endregion Smash
 
     #endregion Abilities
