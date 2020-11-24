@@ -60,7 +60,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        dirX = Input.GetAxisRaw("Horizontal");
+        dirX = Input.GetAxis("Horizontal");
 
         if (GameManager.Instance.changingScenes)
             return;
@@ -69,17 +69,14 @@ public class Player : MonoBehaviour
         DashCounter();
         if (isDashing)  // Briefly disable player controls if isDashing
             return;
-        Run();
+        //Run();
+        newRun();
         Climb();
         Jump();
-        //Tornado();
+        Tornado();
     }
 
-    private void FixedUpdate()
-    {
-        //newRun();
-    }
-
+    
     private void DirectionSet()
     {
         if (CrossPlatformInputManager.GetAxis("Horizontal") > 0.0f)
