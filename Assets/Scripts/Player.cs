@@ -11,6 +11,10 @@ public class Player : MonoBehaviour
     [SerializeField] float runSpeed = 5f;
     [SerializeField] float jumpSpeed = 5f;
     [SerializeField] float climbSpeed = 5f;
+    [SerializeField] float slideDistance = 15f;
+    float dirX;
+    bool touchingTornado = false;
+    bool isSliding = false;
 
     [Header("Dash")]
     [SerializeField] GameObject dashEffect;
@@ -33,6 +37,7 @@ public class Player : MonoBehaviour
 
     Rigidbody2D myRigidBody;
     BoxCollider2D boxCollider;
+    CapsuleCollider2D capsuleCollider;
     float gravityScaleStart;
     Direction direction;
     SmashDirection smashDirection;
@@ -68,7 +73,9 @@ public class Player : MonoBehaviour
     void Start()
     {
         myRigidBody = GetComponent<Rigidbody2D>();
-        boxCollider = GetComponent<BoxCollider2D>(); 
+        boxCollider = GetComponent<BoxCollider2D>();
+        capsuleCollider = GetComponent<CapsuleCollider2D>();
+
         gravityScaleStart = myRigidBody.gravityScale;
         //TOTAL_SMASH_TIME = 0.1f;
     }
@@ -79,6 +86,8 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        dirX = Input.GetAxis("Horizontal");
+
         if (GameManager.Instance.changingScenes)
             return;
         DirectionSet();
@@ -88,9 +97,11 @@ public class Player : MonoBehaviour
         SmashCounter();
         if (isDashing || isSmashing)  // Briefly disable player controls if isDashing
             return;
-        Run();
+        //Run();
+        newRun();
         Climb();
         Jump();
+        Tornado();
     }
 
     #endregion Update Funcitons
@@ -128,15 +139,38 @@ public class Player : MonoBehaviour
             direction = Direction.down;
     }
 
+    void newRun()
+    {
+        
+            if (dirX != 0)
+            {
+                if (!isSliding)
+                {
+                    myRigidBody.velocity = new Vector2(dirX * runSpeed, myRigidBody.velocity.y);
+                    animator.SetFloat("Speed", Mathf.Abs(dirX));
+                }
+            }
+            else if (dirX == 0)
+            {
+                animator.SetFloat("Speed", Mathf.Abs(dirX));
+            }
+        
+        
+    }
 
-
+    
     private void Run()
     {
-        float controlThrow = CrossPlatformInputManager.GetAxis("Horizontal");
-        Vector2 playerVelocity = new Vector2(runSpeed * controlThrow, myRigidBody.velocity.y);
-        myRigidBody.velocity = playerVelocity;
-        //animator.SetFloat("Speed", Mathf.Abs(controlThrow));
+        
+            float controlThrow = CrossPlatformInputManager.GetAxis("Horizontal");
+            Vector2 playerVelocity = new Vector2(runSpeed * controlThrow, myRigidBody.velocity.y);
+            myRigidBody.velocity = playerVelocity;
+            animator.SetFloat("Speed", Mathf.Abs(controlThrow));
+        
+        
     }
+    
+    
 
     private void Climb()
     {
@@ -456,6 +490,32 @@ public class Player : MonoBehaviour
         myRigidBody.velocity = Vector2.zero;
         myRigidBody.gravityScale = 0.0f;
         GameManager.Instance.ReloadScene();
+    }
+
+    void Tornado()
+    {
+        if (capsuleCollider.IsTouchingLayers(LayerMask.GetMask("Tornado")))
+        {
+            if (dirX > 0)
+                StartCoroutine(Sliding(-1f));
+            else if (dirX < 0)
+            {
+                StartCoroutine(Sliding(1f));
+            }
+        }
+    }
+
+
+    IEnumerator Sliding(float direction)
+    {
+        isSliding = true;
+        myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, 0f);
+        myRigidBody.AddForce(new Vector2(slideDistance * direction, 0f), ForceMode2D.Impulse);
+        float gravity = myRigidBody.gravityScale;
+        myRigidBody.gravityScale = 0;
+        yield return new WaitForSeconds(0.4f);
+        isSliding = false;
+        myRigidBody.gravityScale = gravity;
     }
 }
     #endregion Death
