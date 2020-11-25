@@ -41,7 +41,7 @@ public class Player : MonoBehaviour
     float gravityScaleStart;
     Direction direction;
     SmashDirection smashDirection;
-    //public Animator animator;
+    public Animator animator;
     GameObject p;
     SpriteRenderer player;
 
@@ -67,7 +67,7 @@ public class Player : MonoBehaviour
     {
         SoundManager.Initialize();
         player = GetComponent<SpriteRenderer>();
-        
+
     }
 
     void Start()
@@ -131,7 +131,7 @@ public class Player : MonoBehaviour
                 //Play Run Sound FX
                 SoundManager.PlaySound(SoundManager.Sound.RunFX, Random.Range(0.75f, 1f));
             }
-            
+
         }
         //if (CrossPlatformInputManager.GetAxis("Vertical") > 0.0f)
         //    direction = Direction.up;
@@ -141,36 +141,36 @@ public class Player : MonoBehaviour
 
     void newRun()
     {
-        
-            if (dirX != 0)
+
+        if (dirX != 0)
+        {
+            if (!isSliding)
             {
-                if (!isSliding)
-                {
-                    myRigidBody.velocity = new Vector2(dirX * runSpeed, myRigidBody.velocity.y);
-                    animator.SetFloat("Speed", Mathf.Abs(dirX));
-                }
-            }
-            else if (dirX == 0)
-            {
+                myRigidBody.velocity = new Vector2(dirX * runSpeed, myRigidBody.velocity.y);
                 animator.SetFloat("Speed", Mathf.Abs(dirX));
             }
-        
-        
+        }
+        else if (dirX == 0)
+        {
+            animator.SetFloat("Speed", Mathf.Abs(dirX));
+        }
+
+
     }
 
-    
+
     private void Run()
     {
-        
-            float controlThrow = CrossPlatformInputManager.GetAxis("Horizontal");
-            Vector2 playerVelocity = new Vector2(runSpeed * controlThrow, myRigidBody.velocity.y);
-            myRigidBody.velocity = playerVelocity;
-            animator.SetFloat("Speed", Mathf.Abs(controlThrow));
-        
-        
+
+        float controlThrow = CrossPlatformInputManager.GetAxis("Horizontal");
+        Vector2 playerVelocity = new Vector2(runSpeed * controlThrow, myRigidBody.velocity.y);
+        myRigidBody.velocity = playerVelocity;
+        animator.SetFloat("Speed", Mathf.Abs(controlThrow));
+
+
     }
-    
-    
+
+
 
     private void Climb()
     {
@@ -180,18 +180,18 @@ public class Player : MonoBehaviour
             return;
         }
 
-        
+
 
         float controlThrow = CrossPlatformInputManager.GetAxis("Vertical");
         Vector2 climbVelocity = new Vector2(myRigidBody.velocity.x, controlThrow * climbSpeed);
         myRigidBody.velocity = climbVelocity;
         myRigidBody.gravityScale = 0f;
-        
+
     }
 
     private void Jump()
     {
-        if (!boxCollider.IsTouchingLayers(LayerMask.GetMask("Ground")) && !boxCollider.IsTouchingLayers(LayerMask.GetMask("Smashable")))
+        if (!isGrounded())
         {
             return;
         }
@@ -200,7 +200,7 @@ public class Player : MonoBehaviour
         {
             // animator.SetTrigger("Jump");
 
-            
+
             Vector2 jumpVelocityToAdd = new Vector2(0f, jumpSpeed);
             myRigidBody.velocity += jumpVelocityToAdd;
 
@@ -209,7 +209,7 @@ public class Player : MonoBehaviour
             StartCoroutine(jumpTimer(.80f));
 
         }
-        
+
     }
     #endregion Movement
 
@@ -225,12 +225,12 @@ public class Player : MonoBehaviour
         {
             //animator.SetTrigger("Dash");
             StartCoroutine(dashTimer(.4f));
-           
+
             if (canDash && !isDashing)
             {
                 GameObject DashEffectToDestroy;
 
-                if (!boxCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
+                if (!isGrounded())
                     hasAirDashed = true;
 
                 if (diagonalDash)
@@ -304,7 +304,7 @@ public class Player : MonoBehaviour
             dashCooldown -= Time.deltaTime;
         if (dashCooldown <= 0.0f)
         {
-            if (boxCollider.IsTouchingLayers(LayerMask.GetMask("Ground")) || !hasAirDashed)
+            if (isGrounded() || !hasAirDashed)
             {
                 canDash = true;
                 hasAirDashed = false;
@@ -341,7 +341,7 @@ public class Player : MonoBehaviour
                     myRigidBody.velocity = Vector2.left * smashSpeed;
                     smashDirection = SmashDirection.left;
                 }
-                if (direction == Direction.down)
+                if (direction == Direction.down && !isGrounded())
                 {
                     isSmashing = true;
                     myRigidBody.gravityScale = 0.0f;
@@ -356,7 +356,7 @@ public class Player : MonoBehaviour
     {
         if (isSmashing)
         {
-           
+
             Collider2D[] smashablesHit = null;
             // If player collides with the ground while smashing down
             if ((smashDirection == SmashDirection.down) && boxCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
@@ -373,7 +373,7 @@ public class Player : MonoBehaviour
             // If player collides with a wall while smashing left or right
             else
             {
-                if(smashDirection == SmashDirection.left && Physics2D.OverlapCircle(leftSmashPos.position, checkRadius, GameManager.Instance.ground))
+                if (smashDirection == SmashDirection.left && Physics2D.OverlapCircle(leftSmashPos.position, checkRadius, GameManager.Instance.ground))
                 {
                     Debug.Log("HERE");
                     myRigidBody.velocity = Vector2.zero;
@@ -383,7 +383,7 @@ public class Player : MonoBehaviour
                     smashCooldown = MIN_SMASH_COOLDOWN;
                 }
                 // Made seperate in case player smashes with their back to a wall
-                else if(smashDirection == SmashDirection.right && Physics2D.OverlapCircle(rightSmashPos.position, checkRadius, GameManager.Instance.ground))
+                else if (smashDirection == SmashDirection.right && Physics2D.OverlapCircle(rightSmashPos.position, checkRadius, GameManager.Instance.ground))
                 {
                     myRigidBody.velocity = Vector2.zero;
                     myRigidBody.gravityScale = 1.0f;
@@ -412,11 +412,11 @@ public class Player : MonoBehaviour
                     smashablesHit = Physics2D.OverlapCircleAll(leftSmashPos.position, checkRadius, GameManager.Instance.smashable);
                     smashTime = 0.1f;
                 }
-                else if(smashDirection == SmashDirection.right && Physics2D.OverlapCircle(rightSmashPos.position, checkRadius, GameManager.Instance.smashable))
+                else if (smashDirection == SmashDirection.right && Physics2D.OverlapCircle(rightSmashPos.position, checkRadius, GameManager.Instance.smashable))
                 {
                     smashablesHit = Physics2D.OverlapCircleAll(rightSmashPos.position, checkRadius, GameManager.Instance.smashable);
                     smashTime = 0.1f;
-                }   
+                }
             }
             if (smashablesHit != null)
                 for (int i = 0; i < smashablesHit.Length; i++)
@@ -443,10 +443,10 @@ public class Player : MonoBehaviour
             smashCooldown -= Time.deltaTime;
         if (smashCooldown <= 0.0f)
         {
-            if (boxCollider.IsTouchingLayers(LayerMask.GetMask("Ground")) || boxCollider.IsTouchingLayers(LayerMask.GetMask("Smashable")))
+            if (isGrounded())
             {
                 canSmash = true;
-                
+
             }
         }
     }
@@ -468,15 +468,15 @@ public class Player : MonoBehaviour
     #region Animation
     IEnumerator jumpTimer(float time)
     {
-        //animator.SetBool("isJumping", true);
+        animator.SetBool("isJumping", true);
         yield return new WaitForSeconds(time);
-        //animator.SetBool("isJumping", false);
+        animator.SetBool("isJumping", false);
     }
     IEnumerator dashTimer(float time)
     {
-        //animator.SetBool("isDashing", true);
+        animator.SetBool("isDashing", true);
         yield return new WaitForSeconds(time);
-        //animator.SetBool("isDashing", false);
+        animator.SetBool("isDashing", false);
     }
 
     #endregion Animation
@@ -492,6 +492,9 @@ public class Player : MonoBehaviour
         GameManager.Instance.ReloadScene();
     }
 
+    #endregion Death
+
+    #region Other
     void Tornado()
     {
         if (capsuleCollider.IsTouchingLayers(LayerMask.GetMask("Tornado")))
@@ -517,5 +520,13 @@ public class Player : MonoBehaviour
         isSliding = false;
         myRigidBody.gravityScale = gravity;
     }
+
+    bool isGrounded()
+    { 
+        if(boxCollider.IsTouchingLayers(LayerMask.GetMask("Ground")) || boxCollider.IsTouchingLayers(LayerMask.GetMask("Smashable")))
+            return true;
+        return false;
+    }
+    #endregion Other
 }
-    #endregion Death
+
