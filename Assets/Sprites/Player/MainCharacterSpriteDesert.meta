@@ -1,0 +1,1666 @@
+fileFormatVersion: 2
+guid: 7ab8a135b9d860047a4ec36a49f87b12
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5233087659404406123
+    second: thief_desert_base_left
+  - first:
+      213: -6776025845399369582
+    second: thief_desert_base
+  - first:
+      213: 4485894705172287004
+    second: thief_desert_base_right
+  - first:
+      213: -2809240539752388856
+    second: thief_desert_idle_01
+  - first:
+      213: -3222397552167089593
+    second: thief_desert_idle_02
+  - first:
+      213: -8056828819287319746
+    second: thief_desert_idle_03
+  - first:
+      213: -1349333048326610778
+    second: thief_desert_idle_04
+  - first:
+      213: -8027728636211250936
+    second: thief_desert_idle_05
+  - first:
+      213: 6963263560790445559
+    second: thief_desert_dash_01
+  - first:
+      213: -1212189892723047799
+    second: thief_desert_dash_02
+  - first:
+      213: -8843833106838939841
+    second: thief_desert_dash_03
+  - first:
+      213: 6895419898075543572
+    second: thief_desert_dash_04
+  - first:
+      213: -4794500932074661339
+    second: thief_desert_dash_05
+  - first:
+      213: -4297821621497352358
+    second: thief_desert_dash_06
+  - first:
+      213: 7348835421607975826
+    second: thief_desert_run_01
+  - first:
+      213: -8181173888670492616
+    second: thief_desert_run_02
+  - first:
+      213: 7085927919210753980
+    second: thief_desert_run_03
+  - first:
+      213: 2873641364723240612
+    second: thief_desert_run_04
+  - first:
+      213: 4287037253767306628
+    second: thief_desert_run_05
+  - first:
+      213: -1982726297324296241
+    second: thief_desert_run_06
+  - first:
+      213: -856100918216104558
+    second: thief_desert_side_smash_01
+  - first:
+      213: -1834034319806443444
+    second: thief_desert_side_smash_02
+  - first:
+      213: -4510411698269629488
+    second: thief_desert_side_smash_03
+  - first:
+      213: 1035467190979974190
+    second: thief_desert_side_smash_04
+  - first:
+      213: -1069142461646045239
+    second: thief_desert_side_smash_05
+  - first:
+      213: -3211291782882990461
+    second: thief_desert_side_smash_06
+  - first:
+      213: -8909415826338000307
+    second: thief_desert_side_smash_07
+  - first:
+      213: 7313179599807644510
+    second: thief_desert_jump_01
+  - first:
+      213: 5665967706113819707
+    second: thief_desert_jump_02
+  - first:
+      213: -2366986332450775161
+    second: thief_desert_jump_03
+  - first:
+      213: -4180915209603145705
+    second: thief_desert_jump_04
+  - first:
+      213: 6117211327957292943
+    second: thief_desert_jump_05
+  - first:
+      213: -8555431617716259461
+    second: thief_desert_jump_06
+  - first:
+      213: 3863601526744485984
+    second: thief_desert_jump_07
+  - first:
+      213: -4845136855882682588
+    second: thief_desert_jump_08
+  - first:
+      213: -2816787648198390984
+    second: thief_desert_down_smash_01
+  - first:
+      213: 7576793129620891274
+    second: thief_desert_down_smash_02
+  - first:
+      213: 8453402002784888145
+    second: thief_desert_down_smash_03
+  - first:
+      213: -3116707434268510980
+    second: thief_desert_down_smash_04
+  - first:
+      213: -2198766897808734304
+    second: thief_desert_down_smash_05
+  - first:
+      213: -2882319894849054334
+    second: thief_desert_down_smash_06
+  - first:
+      213: -6589607988810080092
+    second: thief_desert_down_smash_07
+  - first:
+      213: 6517175060835295559
+    second: thief_desert_down_smash_08
+  - first:
+      213: 7819657365754044582
+    second: thief_desert_down_smash_09
+  - first:
+      213: -9149270078673310716
+    second: thief_desert_down_smash_10
+  - first:
+      213: -3123755832717729680
+    second: thief_desert_down_smash_11
+  - first:
+      213: 6820491299104401749
+    second: thief_desert_down_smash_12
+  - first:
+      213: 2848636301669974547
+    second: thief_desert_down_smash_13
+  - first:
+      213: -5823449894388825965
+    second: thief_desert_down_smash_14
+  - first:
+      213: -3467780980876574730
+    second: thief_desert_death_01
+  - first:
+      213: 1707505349454014042
+    second: thief_desert_death_02
+  - first:
+      213: 6889585131879368125
+    second: thief_desert_death_03
+  - first:
+      213: -7749903858955195328
+    second: thief_desert_death_04
+  - first:
+      213: 7022315941725038349
+    second: thief_desert_death_05
+  - first:
+      213: -3535694496944661895
+    second: thief_desert_death_06
+  - first:
+      213: 4232375715954004412
+    second: thief_desert_death_07
+  - first:
+      213: 7759418297578877402
+    second: thief_desert_death_08
+  - first:
+      213: 104406100919313414
+    second: thief_desert_climb_01
+  - first:
+      213: 3651069963604389033
+    second: thief_desert_climb_02
+  - first:
+      213: 3383433972720867908
+    second: thief_desert_climb_03
+  - first:
+      213: -5892115924975566042
+    second: thief_desert_climb_04
+  - first:
+      213: 1746825315271497352
+    second: thief_desert_climb_05
+  - first:
+      213: -1018488749231455900
+    second: thief_desert_climb_06
+  - first:
+      213: -4169429885593665851
+    second: thief_desert_climb_07
+  - first:
+      213: 8813261802717499856
+    second: thief_desert_climb_08
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: thief_desert_base_left
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 324
+        width: 15
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6da7490089af9840800000000000000
+      internalID: 5233087659404406123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_base
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 323
+        width: 23
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 298ca100568b6f1a0800000000000000
+      internalID: -6776025845399369582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_base_right
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 324
+        width: 15
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1e89919779114e30800000000000000
+      internalID: 4485894705172287004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_idle_01
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 324
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 807ae63fc929309d0800000000000000
+      internalID: -2809240539752388856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_idle_02
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 318
+        width: 16
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74a0ef1df7eb743d0800000000000000
+      internalID: -3222397552167089593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_idle_03
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 324
+        width: 17
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3bdf3230e4603090800000000000000
+      internalID: -8056828819287319746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_idle_04
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 324
+        width: 17
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a02ccaddb4364de0800000000000000
+      internalID: -1349333048326610778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_idle_05
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 324
+        width: 15
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 809b56d8657c79090800000000000000
+      internalID: -8027728636211250936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_dash_01
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 331
+        width: 34
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fd065ac05b72a060800000000000000
+      internalID: 6963263560790445559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_dash_02
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 331
+        width: 38
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9828ceb07bf6d2fe0800000000000000
+      internalID: -1212189892723047799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_dash_03
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 331
+        width: 41
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f37960e55a4644580800000000000000
+      internalID: -8843833106838939841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_dash_04
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 331
+        width: 37
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 418f3f12dd371bf50800000000000000
+      internalID: 6895419898075543572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_dash_05
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 330
+        width: 37
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52a196cfdc2867db0800000000000000
+      internalID: -4794500932074661339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_dash_06
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 331
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5f28ae81021b54c0800000000000000
+      internalID: -4297821621497352358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_run_01
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 263
+        width: 34
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29b50c151ee4cf560800000000000000
+      internalID: 7348835421607975826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_run_02
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 263
+        width: 35
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8381818a1b1a67e80800000000000000
+      internalID: -8181173888670492616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_run_03
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 263
+        width: 37
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbf649056e5465260800000000000000
+      internalID: 7085927919210753980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_run_04
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 264
+        width: 35
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ae8234989931e720800000000000000
+      internalID: 2873641364723240612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_run_05
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 263
+        width: 35
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48d9aa92bad9e7b30800000000000000
+      internalID: 4287037253767306628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_run_06
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 262
+        width: 35
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc7e82100f0fb74e0800000000000000
+      internalID: -1982726297324296241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_side_smash_01
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 254
+        width: 29
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 295e7dd20c48e14f0800000000000000
+      internalID: -856100918216104558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_side_smash_02
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 253
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c40df06d0833c86e0800000000000000
+      internalID: -1834034319806443444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_side_smash_03
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 257
+        width: 39
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d35fd5257cc761c0800000000000000
+      internalID: -4510411698269629488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_side_smash_04
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 257
+        width: 42
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e24deee8ce7be5e00800000000000000
+      internalID: 1035467190979974190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_side_smash_05
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 256
+        width: 38
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cffc4f7894a921f0800000000000000
+      internalID: -1069142461646045239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_side_smash_06
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 257
+        width: 30
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 386e02b33233f63d0800000000000000
+      internalID: -3211291782882990461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_side_smash_07
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 258
+        width: 29
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4251e292856b5480800000000000000
+      internalID: -8909415826338000307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_jump_01
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 194
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e530b216912ad7560800000000000000
+      internalID: 7313179599807644510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_jump_02
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 194
+        width: 23
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b34cfbfeb9f81ae40800000000000000
+      internalID: 5665967706113819707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_jump_03
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 197
+        width: 23
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78f1112b876c62fd0800000000000000
+      internalID: -2366986332450775161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_jump_04
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 206
+        width: 31
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 710a39fa4c76af5c0800000000000000
+      internalID: -4180915209603145705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_jump_05
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 203
+        width: 30
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f87d3eada43b4e450800000000000000
+      internalID: 6117211327957292943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_jump_06
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 199
+        width: 30
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7570e5b540054980800000000000000
+      internalID: -8555431617716259461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_jump_07
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 194
+        width: 27
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 060134b4e154e9530800000000000000
+      internalID: 3863601526744485984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_jump_08
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 193
+        width: 15
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42fa5f043bd92ccb0800000000000000
+      internalID: -4845136855882682588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_down_smash_01
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 193
+        width: 29
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83b4d65de82c8e8d0800000000000000
+      internalID: -2816787648198390984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_down_smash_02
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 197
+        width: 23
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a866ca3353d262960800000000000000
+      internalID: 7576793129620891274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_down_smash_03
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 204
+        width: 21
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 155a19f5554805570800000000000000
+      internalID: 8453402002784888145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_down_smash_04
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 203
+        width: 18
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf43b9ff91b3fb4d0800000000000000
+      internalID: -3116707434268510980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_down_smash_05
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 202
+        width: 21
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a70930f7296c71e0800000000000000
+      internalID: -2198766897808734304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_down_smash_06
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 202
+        width: 21
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2891b7aa351fff7d0800000000000000
+      internalID: -2882319894849054334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_down_smash_07
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 201
+        width: 28
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a026e982720d84a0800000000000000
+      internalID: -6589607988810080092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_down_smash_08
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 201
+        width: 27
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7416f183038a17a50800000000000000
+      internalID: 6517175060835295559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_down_smash_09
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 201
+        width: 30
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a0690f91f0058c60800000000000000
+      internalID: 7819657365754044582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_down_smash_10
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 202
+        width: 29
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40c219e9653470180800000000000000
+      internalID: -9149270078673310716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_down_smash_11
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 199
+        width: 33
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0702ec9de9036a4d0800000000000000
+      internalID: -3123755832717729680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_down_smash_12
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 204
+        width: 21
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 559a2c433b047ae50800000000000000
+      internalID: 6820491299104401749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_down_smash_13
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 202
+        width: 22
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3124257af93688720800000000000000
+      internalID: 2848636301669974547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_down_smash_14
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 194
+        width: 24
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3900badcc23fe2fa0800000000000000
+      internalID: -5823449894388825965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_death_01
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 136
+        width: 23
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fffefb2297ffdfc0800000000000000
+      internalID: -3467780980876574730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_death_02
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 136
+        width: 25
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a56294e811742b710800000000000000
+      internalID: 1707505349454014042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_death_03
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 136
+        width: 43
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db58b73cc29bc9f50800000000000000
+      internalID: 6889585131879368125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_death_04
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 137
+        width: 51
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04ceb83408fc27490800000000000000
+      internalID: -7749903858955195328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_death_05
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 139
+        width: 50
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d076517a427447160800000000000000
+      internalID: 7022315941725038349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_death_06
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 141
+        width: 54
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97a5f438690beeec0800000000000000
+      internalID: -3535694496944661895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_death_07
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 144
+        width: 56
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb19d612a4b6cba30800000000000000
+      internalID: 4232375715954004412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_death_08
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 142
+        width: 55
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad1fada94ddfeab60800000000000000
+      internalID: 7759418297578877402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_climb_01
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 129
+        width: 23
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 604edadabcce27100800000000000000
+      internalID: 104406100919313414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_climb_02
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 131
+        width: 22
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9acecb6a9c43ba230800000000000000
+      internalID: 3651069963604389033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_climb_03
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 130
+        width: 21
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44a1401a54f54fe20800000000000000
+      internalID: 3383433972720867908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_climb_04
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 132
+        width: 21
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 623c864b8cffa3ea0800000000000000
+      internalID: -5892115924975566042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_climb_05
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 133
+        width: 23
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 886da618e58fd3810800000000000000
+      internalID: 1746825315271497352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_climb_06
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 133
+        width: 22
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 461c356f0e99dd1f0800000000000000
+      internalID: -1018488749231455900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_climb_07
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 133
+        width: 21
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ceba411c953326c0800000000000000
+      internalID: -4169429885593665851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief_desert_climb_08
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 117
+        width: 21
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d1de773aeefe4a70800000000000000
+      internalID: 8813261802717499856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
