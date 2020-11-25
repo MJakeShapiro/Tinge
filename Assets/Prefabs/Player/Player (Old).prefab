@@ -146,12 +146,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runSpeed: 10
-  jumpSpeed: 30
-  climbSpeed: 10
+  jumpSpeed: 15
+  climbSpeed: 8
   slideDistance: 15
   dashEffect: {fileID: 5502138560353755212, guid: 78ad0729f466cd141b88d6436c1a14cb, type: 3}
-  dashSpeed: 40
-  TOTAL_DASH_TIME: 0.15
+  dashSpeed: 25
+  TOTAL_DASH_TIME: 0.25
   MIN_DASH_COOLDOWN: 0.5
   diagonalDash: 0
   variableDashLength: 0
