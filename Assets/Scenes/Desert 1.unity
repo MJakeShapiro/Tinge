@@ -773,7 +773,7 @@ PrefabInstance:
     - target: {fileID: 2888614653234167914, guid: 8f93ef593d4f1ed4783b49bf40bfc801, type: 3}
       propertyPath: nextScene
       value: 
-      objectReference: {fileID: 102900000, guid: 34a0ff93e1fb2f9479e43167801dab63, type: 3}
+      objectReference: {fileID: 102900000, guid: 214838117d638ee4b90d041df8e510fc, type: 3}
     - target: {fileID: 2888614653234167919, guid: 8f93ef593d4f1ed4783b49bf40bfc801, type: 3}
       propertyPath: m_Name
       value: TransitionPoint (Desert 2)
