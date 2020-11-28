@@ -45,6 +45,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneChanger: {fileID: 8233978993972534687}
+  changingScenes: 0
+  ground:
+    serializedVersion: 2
+    m_Bits: 256
+  smashable:
+    serializedVersion: 2
+    m_Bits: 2048
 --- !u!1001 &5361382319148973936
 PrefabInstance:
   m_ObjectHideFlags: 0
