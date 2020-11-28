@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Desert Sprite Atlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 2b0a376f689002b44ab6fa4f53f06499, type: 3}
+    totalSpriteSurfaceArea: 181760
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 7146436146784585715, guid: 995707634fe75e6479b04b0fb37f05fd, type: 3}
+  - {fileID: -2114523725286043044, guid: 995707634fe75e6479b04b0fb37f05fd, type: 3}
+  - {fileID: -2411853936024393314, guid: 995707634fe75e6479b04b0fb37f05fd, type: 3}
+  - {fileID: 374749796124804294, guid: 995707634fe75e6479b04b0fb37f05fd, type: 3}
+  - {fileID: -8781153016959274485, guid: 995707634fe75e6479b04b0fb37f05fd, type: 3}
+  - {fileID: -3166632716983083194, guid: 995707634fe75e6479b04b0fb37f05fd, type: 3}
+  - {fileID: 1639488968101236168, guid: 995707634fe75e6479b04b0fb37f05fd, type: 3}
+  - {fileID: 1714765616357621531, guid: 995707634fe75e6479b04b0fb37f05fd, type: 3}
+  - {fileID: 1705664574993621505, guid: 995707634fe75e6479b04b0fb37f05fd, type: 3}
+  - {fileID: -1558235287519447542, guid: 995707634fe75e6479b04b0fb37f05fd, type: 3}
+  - {fileID: 836879015951340428, guid: 995707634fe75e6479b04b0fb37f05fd, type: 3}
+  - {fileID: -5067666021510707849, guid: 995707634fe75e6479b04b0fb37f05fd, type: 3}
+  - {fileID: -8297816968900229980, guid: 995707634fe75e6479b04b0fb37f05fd, type: 3}
+  - {fileID: -1417091149791277388, guid: 995707634fe75e6479b04b0fb37f05fd, type: 3}
+  - {fileID: 6375819061408276979, guid: 995707634fe75e6479b04b0fb37f05fd, type: 3}
+  - {fileID: 5005744435912817636, guid: 995707634fe75e6479b04b0fb37f05fd, type: 3}
+  - {fileID: -274263871824965192, guid: 995707634fe75e6479b04b0fb37f05fd, type: 3}
+  - {fileID: -2319325062145606148, guid: 995707634fe75e6479b04b0fb37f05fd, type: 3}
+  - {fileID: 6080674634562157142, guid: 995707634fe75e6479b04b0fb37f05fd, type: 3}
+  - {fileID: 585286960230544233, guid: 995707634fe75e6479b04b0fb37f05fd, type: 3}
+  - {fileID: -3762284924557197350, guid: 995707634fe75e6479b04b0fb37f05fd, type: 3}
+  - {fileID: -8013184778973640396, guid: 995707634fe75e6479b04b0fb37f05fd, type: 3}
+  - {fileID: 1314451458850160154, guid: 995707634fe75e6479b04b0fb37f05fd, type: 3}
+  - {fileID: 2559120466782611423, guid: 995707634fe75e6479b04b0fb37f05fd, type: 3}
+  - {fileID: -2864652516780903557, guid: 995707634fe75e6479b04b0fb37f05fd, type: 3}
+  - {fileID: 6396988516151037924, guid: 4e27a65632f324083874e5b66d0babad, type: 3}
+  - {fileID: -3419557835098572109, guid: 4e27a65632f324083874e5b66d0babad, type: 3}
+  - {fileID: -6218135025439079332, guid: 4e27a65632f324083874e5b66d0babad, type: 3}
+  - {fileID: -4221292441718896662, guid: 4e27a65632f324083874e5b66d0babad, type: 3}
+  - {fileID: 21300000, guid: 058d9e7b6763e44c483195363a6fb14f, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - desert ground sprites_6
+  - desert ground sprites_7
+  - desert ground sprites_4
+  - desert ground sprites_5
+  - desert ground sprites_2
+  - desert ground sprites_3
+  - desert ground sprites_0
+  - desert ground sprites_1
+  - desert ground sprites_8
+  - desert ground sprites_9
+  - desert ground sprites_24
+  - desert ground sprites_20
+  - desert ground sprites_21
+  - desert ground sprites_22
+  - desert ground sprites_23
+  - desert ground sprites_15
+  - desert ground sprites_14
+  - desert ground sprites_17
+  - desert ground sprites_16
+  - desert ground sprites_11
+  - desert ground sprites_10
+  - desert ground sprites_13
+  - desert ground sprites_12
+  - desert ground sprites_19
+  - desert ground sprites_18
+  - QuickSandSprite_0
+  - QuickSandSprite_1
+  - QuickSandSprite_2
+  - QuickSandSprite_3
+  - bomb
+  m_Tag: Desert Sprite Atlas
+  m_IsVariant: 0
