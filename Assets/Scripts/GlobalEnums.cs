@@ -5,3 +5,10 @@
     left,
     right
 }
+
+public enum SmashDirection
+{
+    down,
+    left,
+    right
+}
