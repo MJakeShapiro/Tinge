@@ -3,7 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - ground
+  - Obstacle
+  - BombPickup
+  - Enemy
+  - ExplosionFX
+  - Bullet
+  - HealthBar
+  - music
   layers:
   - Default
   - TransparentFX
@@ -18,7 +26,6 @@ TagManager:
   - Player
   - Smashable
   - Tornado
-  - 
   - 
   - 
   - 
