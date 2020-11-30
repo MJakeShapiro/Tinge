@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2396835653678790921}
   - component: {fileID: 2396835653678790920}
   - component: {fileID: 1802546433705264353}
+  - component: {fileID: -8902871060410368067}
   m_Layer: 0
   m_Name: Rubble
   m_TagString: Untagged
@@ -100,11 +101,11 @@ Rigidbody2D:
   m_Mass: 0.1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!58 &2396835653678790920
 CircleCollider2D:
@@ -119,9 +120,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.009850919, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.8367
+  m_Radius: 1
 --- !u!114 &1802546433705264353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,5 +133,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7005bb8241d514fbd80e1a9cadbe0315, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-8902871060410368067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2396835653678790923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f220cd1dc4860da419acc854ccca830a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
