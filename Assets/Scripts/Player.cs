@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     [SerializeField] float slideDistance = 15f;
     float dirX;
     bool touchingTornado = false;
+    bool isPushed = false;
     bool isSliding = false;
 
     [Header("Dash")]
@@ -98,6 +99,7 @@ public class Player : MonoBehaviour
         if (isDashing || isSmashing)  // Briefly disable player controls if isDashing
             return;
         //Run();
+        Slide();
         newRun();
         Climb();
         Jump();
@@ -144,7 +146,7 @@ public class Player : MonoBehaviour
 
         if (dirX != 0)
         {
-            if (!isSliding)
+            if (!isPushed)
             {
                 myRigidBody.velocity = new Vector2(dirX * runSpeed, myRigidBody.velocity.y);
                 animator.SetFloat("Speed", Mathf.Abs(dirX));
@@ -158,7 +160,6 @@ public class Player : MonoBehaviour
 
     }
 
-
     private void Run()
     {
 
@@ -169,8 +170,6 @@ public class Player : MonoBehaviour
 
 
     }
-
-
 
     private void Climb()
     {
@@ -198,12 +197,11 @@ public class Player : MonoBehaviour
 
         if (CrossPlatformInputManager.GetButtonDown("Jump"))
         {
-            //if (isSliding)
-            //{
-            //    isSliding = false;
-            //    animator.SetBool("isSliding", false);
-            //    animator.SetBool("SlideJumpOut", true);
-            //}
+            if (isSliding)
+            {
+                isSliding = false;
+                StartCoroutine(SlideJumpOut(0.18f));
+            }
 
             Vector2 jumpVelocityToAdd = new Vector2(0f, jumpSpeed);
             myRigidBody.velocity += jumpVelocityToAdd;
@@ -214,6 +212,23 @@ public class Player : MonoBehaviour
 
         }
 
+    }
+
+    private void Slide()
+    {
+        if (boxCollider.IsTouchingLayers(LayerMask.GetMask("Slope")))
+        {
+            Debug.Log("SLIDING");
+            if(!isSliding)
+                StartCoroutine(SlideTimer(0.18f));
+            isSliding = true;
+            animator.SetBool("isSliding", true);
+        }
+        else if (isSliding)
+        {
+            isSliding = false;
+            animator.SetBool("isSliding", false);
+        }
     }
     #endregion Movement
 
@@ -335,6 +350,7 @@ public class Player : MonoBehaviour
                 {
                     animator.SetBool("isJumping", false);
                     animator.SetBool("isSideSmashing", true);
+                    SoundManager.PlaySound(SoundManager.Sound.SmashFX, 1f);
                     isSmashing = true;
                     //SoundManager.PlaySound(SoundManager.Sound.SmashFX, 1f);
                     smashTime = TOTAL_SMASH_TIME;
@@ -346,6 +362,7 @@ public class Player : MonoBehaviour
                 {
                     animator.SetBool("isJumping", false);
                     animator.SetBool("isSideSmashing", true);
+                    SoundManager.PlaySound(SoundManager.Sound.SmashFX, 1f);
                     isSmashing = true;
                     //SoundManager.PlaySound(SoundManager.Sound.SmashFX, 1f);
                     smashTime = TOTAL_SMASH_TIME;
@@ -530,6 +547,21 @@ public class Player : MonoBehaviour
 
     }
 
+    IEnumerator SlideTimer(float time)
+    {
+        animator.SetBool("isSlideIn", true);
+        yield return new WaitForSeconds(time);
+        animator.SetBool("isSlideIn", false);
+    }
+
+    IEnumerator SlideJumpOut(float time)
+    {
+        animator.SetBool("SlideJumpOut", true);
+        animator.SetBool("isSliding", false);
+        yield return new WaitForSeconds(time);
+        animator.SetBool("SlideJumpOut", false);
+    }
+
     #endregion Animation
 
     #region Death
@@ -551,31 +583,31 @@ public class Player : MonoBehaviour
         if (capsuleCollider.IsTouchingLayers(LayerMask.GetMask("Tornado")))
         {
             if (dirX > 0)
-                StartCoroutine(Sliding(-1f));
+                StartCoroutine(TornadoPush(-1f));
             else if (dirX < 0)
             {
-                StartCoroutine(Sliding(1f));
+                StartCoroutine(TornadoPush(1f));
             }
         }
     }
 
-
-    IEnumerator Sliding(float direction)
+    IEnumerator TornadoPush(float direction)
     {
-        isSliding = true;
-        animator.SetBool("isSliding", true);
+        isPushed = true;
+        SlideTimer(0.06f);
+        Debug.Log("SLIDING");
         myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, 0f);
         myRigidBody.AddForce(new Vector2(slideDistance * direction, 0f), ForceMode2D.Impulse);
         float gravity = myRigidBody.gravityScale;
         myRigidBody.gravityScale = 0;
         yield return new WaitForSeconds(0.9f);
-        isSliding = false;
+        isPushed = false;
         myRigidBody.gravityScale = gravity;
     }
 
     bool isGrounded()
     { 
-        if(boxCollider.IsTouchingLayers(LayerMask.GetMask("Ground")) || boxCollider.IsTouchingLayers(LayerMask.GetMask("Smashable")))
+        if(boxCollider.IsTouchingLayers(LayerMask.GetMask("Ground")) || boxCollider.IsTouchingLayers(LayerMask.GetMask("Smashable")) || boxCollider.IsTouchingLayers(LayerMask.GetMask("Slope")))
             return true;
         return false;
     }
