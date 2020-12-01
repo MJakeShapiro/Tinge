@@ -13,17 +13,21 @@ public class MusicScenes : MonoBehaviour
 
     void Awake()
     {
+        //Get Scene Name
         Scene m_Scene;
         string sceneName;
         m_Scene = SceneManager.GetActiveScene();
         sceneName = m_Scene.name;
+
+        //Get AudioSource from all game object with the Tag 'Music'
         GameObject[] A = GameObject.FindGameObjectsWithTag("music");
         audioSources = new AudioSource[A.Length];
         for (int i = 0; i < audioSources.Length; i++)
         {
             audioSources[i] = A[i].GetComponent<AudioSource>();
         }
-        AudioSource audio = GetComponent<AudioSource>();
+
+        //Play Background Music Based on the level
         if (sceneName.Contains("HubLevel"))
         {
             if (audioSources[0].clip.name != "Upbeat City LOOP")
@@ -48,7 +52,13 @@ public class MusicScenes : MonoBehaviour
                 audioSources[0].clip = clip;
                 audioSources[0].Play();
             }
+        } else
+        {
+            audioSources[0].clip = Resources.Load("") as AudioClip;
+            audioSources[0].Play();
         }
+
+        //Seamless Music Between Scenes
         if (A.Length > 1)
             Destroy(this.gameObject);
         DontDestroyOnLoad(this.gameObject);
