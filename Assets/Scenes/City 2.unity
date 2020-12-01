@@ -1839,8 +1839,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2888614653234167914, guid: 8f93ef593d4f1ed4783b49bf40bfc801, type: 3}
       propertyPath: nextScene
-      value: 
-      objectReference: {fileID: 102900000, guid: 730a3110970a7834ca9129000a937ab3, type: 3}
+      value: City 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2888614653234167919, guid: 8f93ef593d4f1ed4783b49bf40bfc801, type: 3}
       propertyPath: m_Name
       value: TransitionPoint (City 3)
@@ -81224,7 +81224,7 @@ Tilemap:
       - {fileID: 2339441204619450494, guid: 488ba15a083562047aa1b53c715aba8a, type: 3}
       - {fileID: 3718299316348199318, guid: 488ba15a083562047aa1b53c715aba8a, type: 3}
       - {fileID: -92115015825897824, guid: 488ba15a083562047aa1b53c715aba8a, type: 3}
-      m_AnimationSpeed: 5
+      m_AnimationSpeed: 5.0000005
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: 1, y: -14, z: 0}
@@ -81377,7 +81377,7 @@ Tilemap:
       - {fileID: 2339441204619450494, guid: 488ba15a083562047aa1b53c715aba8a, type: 3}
       - {fileID: 3718299316348199318, guid: 488ba15a083562047aa1b53c715aba8a, type: 3}
       - {fileID: -92115015825897824, guid: 488ba15a083562047aa1b53c715aba8a, type: 3}
-      m_AnimationSpeed: 5
+      m_AnimationSpeed: 5.0000005
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: -31, y: 15, z: 0}
@@ -85530,8 +85530,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2888614653234167914, guid: 8f93ef593d4f1ed4783b49bf40bfc801, type: 3}
       propertyPath: nextScene
-      value: 
-      objectReference: {fileID: 102900000, guid: e1082ba40315bfe4abfda55cd74721ec, type: 3}
+      value: City 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2888614653234167919, guid: 8f93ef593d4f1ed4783b49bf40bfc801, type: 3}
       propertyPath: m_Name
       value: TransitionPoint (City 1)

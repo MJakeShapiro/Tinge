@@ -3811,8 +3811,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2888614653234167914, guid: 8f93ef593d4f1ed4783b49bf40bfc801, type: 3}
       propertyPath: nextScene
-      value: 
-      objectReference: {fileID: 102900000, guid: 04445c329f0ccfe4f8477e3679e791f4, type: 3}
+      value: City 9
+      objectReference: {fileID: 0}
     - target: {fileID: 2888614653234167919, guid: 8f93ef593d4f1ed4783b49bf40bfc801, type: 3}
       propertyPath: m_Name
       value: To 9
