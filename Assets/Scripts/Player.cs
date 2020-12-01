@@ -336,6 +336,7 @@ public class Player : MonoBehaviour
                     animator.SetBool("isJumping", false);
                     animator.SetBool("isSideSmashing", true);
                     isSmashing = true;
+                    //SoundManager.PlaySound(SoundManager.Sound.SmashFX, 1f);
                     smashTime = TOTAL_SMASH_TIME;
                     myRigidBody.gravityScale = 0.0f;
                     myRigidBody.velocity = Vector2.right * smashSpeed;
@@ -346,6 +347,7 @@ public class Player : MonoBehaviour
                     animator.SetBool("isJumping", false);
                     animator.SetBool("isSideSmashing", true);
                     isSmashing = true;
+                    //SoundManager.PlaySound(SoundManager.Sound.SmashFX, 1f);
                     smashTime = TOTAL_SMASH_TIME;
                     myRigidBody.gravityScale = 0.0f;
                     myRigidBody.velocity = Vector2.left * smashSpeed;
@@ -355,6 +357,7 @@ public class Player : MonoBehaviour
                 {
                     StartCoroutine(DownSmashTimer(0.26f));
                     isSmashing = true;
+                    //SoundManager.PlaySound(SoundManager.Sound.SmashFX, 1f);
                     myRigidBody.gravityScale = 0.0f;
                     myRigidBody.velocity = Vector2.down * smashSpeed;
                     smashDirection = SmashDirection.down;
@@ -372,7 +375,7 @@ public class Player : MonoBehaviour
             // If player collides with the ground while smashing down
             if ((smashDirection == SmashDirection.down) && Physics2D.OverlapCircle(downSmashPos.position, checkRadius, GameManager.Instance.ground))
             {
-
+                SoundManager.PlaySound(SoundManager.Sound.SmashFX, 1f);
                 myRigidBody.velocity = Vector2.zero;
                 myRigidBody.gravityScale = 1.0f;
                 isSmashing = false;
@@ -383,7 +386,6 @@ public class Player : MonoBehaviour
                 animator.SetBool("isDownSmash", false);
                 Debug.Log("smashToGround");
                 StartCoroutine(DownSmashCollisionTimer(0.4f));
-                // Play Collision animation here
             }
 
 
@@ -392,6 +394,8 @@ public class Player : MonoBehaviour
             {
                 if (smashDirection == SmashDirection.left && Physics2D.OverlapCircle(leftSmashPos.position, checkRadius, GameManager.Instance.ground))
                 {
+                    SoundManager.PlaySound(SoundManager.Sound.SmashFX, 1f);
+                    Debug.Log("HERE");
                     myRigidBody.velocity = Vector2.zero;
                     myRigidBody.gravityScale = 1.0f;
                     isSmashing = false;
@@ -403,6 +407,7 @@ public class Player : MonoBehaviour
                 // Made seperate in case player smashes with their back to a wall
                 else if (smashDirection == SmashDirection.right && Physics2D.OverlapCircle(rightSmashPos.position, checkRadius, GameManager.Instance.ground))
                 {
+                    SoundManager.PlaySound(SoundManager.Sound.SmashFX, 1f);
                     myRigidBody.velocity = Vector2.zero;
                     myRigidBody.gravityScale = 1.0f;
                     isSmashing = false;
@@ -417,6 +422,7 @@ public class Player : MonoBehaviour
             // If player collides with a smashable while smashing down
             if ((smashDirection == SmashDirection.down) && Physics2D.OverlapCircle(downSmashPos.position, checkRadius, GameManager.Instance.smashable))
             {
+                SoundManager.PlaySound(SoundManager.Sound.SmashFX, 1f);
                 smashablesHit = Physics2D.OverlapCircleAll(downSmashPos.position, checkRadius, GameManager.Instance.smashable);
                 myRigidBody.velocity = Vector2.zero;
                 myRigidBody.gravityScale = 1.0f;
@@ -434,11 +440,13 @@ public class Player : MonoBehaviour
                 // They continue smashing for another 0.1 seconds in order to "smash through"
                 if (smashDirection == SmashDirection.left && Physics2D.OverlapCircle(leftSmashPos.position, checkRadius, GameManager.Instance.smashable))
                 {
+                    SoundManager.PlaySound(SoundManager.Sound.SmashFX, 1f);
                     smashablesHit = Physics2D.OverlapCircleAll(leftSmashPos.position, checkRadius, GameManager.Instance.smashable);
                     smashTime = 0.1f;
                 }
                 else if (smashDirection == SmashDirection.right && Physics2D.OverlapCircle(rightSmashPos.position, checkRadius, GameManager.Instance.smashable))
                 {
+                    SoundManager.PlaySound(SoundManager.Sound.SmashFX, 1f);
                     smashablesHit = Physics2D.OverlapCircleAll(rightSmashPos.position, checkRadius, GameManager.Instance.smashable);
                     smashTime = 0.1f;
                 }
