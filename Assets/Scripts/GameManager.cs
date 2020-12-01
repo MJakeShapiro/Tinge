@@ -49,6 +49,7 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void ReloadScene()
     {
-        instance.sceneChanger.FadeToScene(SceneManager.GetActiveScene().name);
+        string sceneToLoad = SceneManager.GetActiveScene().name;
+        instance.sceneChanger.FadeToScene(sceneToLoad);
     }
 }

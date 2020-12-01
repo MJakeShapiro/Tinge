@@ -20,7 +20,6 @@ public class TransitionPoint : MonoBehaviour
         
         if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
-            Debug.Log(nextScene);
 
             isTriggered = true;
             GameManager.Instance.ChangeScene(nextScene);

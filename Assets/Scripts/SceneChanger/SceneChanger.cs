@@ -17,6 +17,7 @@ public class SceneChanger : MonoBehaviour
 
     public void FadeToScene(string sceneName)
     {
+
         if (GameManager.Instance.changingScenes)
             return;
 
@@ -27,6 +28,7 @@ public class SceneChanger : MonoBehaviour
 
     public void OnFadeComplete()
     {
+
         SceneManager.LoadScene(sceneToLoad);
         animator.SetTrigger("FadeIn");
         GameManager.Instance.changingScenes = false;
