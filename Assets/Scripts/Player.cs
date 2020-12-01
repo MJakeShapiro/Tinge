@@ -350,9 +350,8 @@ public class Player : MonoBehaviour
                 {
                     animator.SetBool("isJumping", false);
                     animator.SetBool("isSideSmashing", true);
-                    SoundManager.PlaySound(SoundManager.Sound.SmashFX, 1f);
+                    SoundManager.PlaySound(SoundManager.Sound.SmashWhoosh, 1f);
                     isSmashing = true;
-                    //SoundManager.PlaySound(SoundManager.Sound.SmashFX, 1f);
                     smashTime = TOTAL_SMASH_TIME;
                     myRigidBody.gravityScale = 0.0f;
                     myRigidBody.velocity = Vector2.right * smashSpeed;
@@ -362,9 +361,8 @@ public class Player : MonoBehaviour
                 {
                     animator.SetBool("isJumping", false);
                     animator.SetBool("isSideSmashing", true);
-                    SoundManager.PlaySound(SoundManager.Sound.SmashFX, 1f);
+                    SoundManager.PlaySound(SoundManager.Sound.SmashWhoosh, 1f);
                     isSmashing = true;
-                    //SoundManager.PlaySound(SoundManager.Sound.SmashFX, 1f);
                     smashTime = TOTAL_SMASH_TIME;
                     myRigidBody.gravityScale = 0.0f;
                     myRigidBody.velocity = Vector2.left * smashSpeed;
@@ -374,7 +372,6 @@ public class Player : MonoBehaviour
                 {
                     StartCoroutine(DownSmashTimer(0.26f));
                     isSmashing = true;
-                    //SoundManager.PlaySound(SoundManager.Sound.SmashFX, 1f);
                     myRigidBody.gravityScale = 0.0f;
                     myRigidBody.velocity = Vector2.down * smashSpeed;
                     smashDirection = SmashDirection.down;
