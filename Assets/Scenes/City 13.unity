@@ -67566,7 +67566,7 @@ GameObject:
   - component: {fileID: 2993089829742829005}
   - component: {fileID: 3413839324429647801}
   - component: {fileID: 5203686554247209438}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Slants
   m_TagString: Untagged
   m_Icon: {fileID: 0}

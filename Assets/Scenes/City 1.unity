@@ -609,7 +609,7 @@ GameObject:
   - component: {fileID: 589775738}
   - component: {fileID: 589775737}
   - component: {fileID: 589775739}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Foreground_Collision_Slants
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1964,7 +1964,7 @@ Tilemap:
       - {fileID: 2339441204619450494, guid: 488ba15a083562047aa1b53c715aba8a, type: 3}
       - {fileID: 3718299316348199318, guid: 488ba15a083562047aa1b53c715aba8a, type: 3}
       - {fileID: -92115015825897824, guid: 488ba15a083562047aa1b53c715aba8a, type: 3}
-      m_AnimationSpeed: 5
+      m_AnimationSpeed: 5.0000005
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: 10, y: -6, z: 0}
@@ -1973,7 +1973,7 @@ Tilemap:
       - {fileID: 2339441204619450494, guid: 488ba15a083562047aa1b53c715aba8a, type: 3}
       - {fileID: 3718299316348199318, guid: 488ba15a083562047aa1b53c715aba8a, type: 3}
       - {fileID: -92115015825897824, guid: 488ba15a083562047aa1b53c715aba8a, type: 3}
-      m_AnimationSpeed: 5.0000005
+      m_AnimationSpeed: 5
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: 29, y: -6, z: 0}
@@ -2009,7 +2009,7 @@ Tilemap:
       - {fileID: 2339441204619450494, guid: 488ba15a083562047aa1b53c715aba8a, type: 3}
       - {fileID: 3718299316348199318, guid: 488ba15a083562047aa1b53c715aba8a, type: 3}
       - {fileID: -92115015825897824, guid: 488ba15a083562047aa1b53c715aba8a, type: 3}
-      m_AnimationSpeed: 5
+      m_AnimationSpeed: 5.0000005
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: 33, y: -6, z: 0}
@@ -2036,7 +2036,7 @@ Tilemap:
       - {fileID: 2339441204619450494, guid: 488ba15a083562047aa1b53c715aba8a, type: 3}
       - {fileID: 3718299316348199318, guid: 488ba15a083562047aa1b53c715aba8a, type: 3}
       - {fileID: -92115015825897824, guid: 488ba15a083562047aa1b53c715aba8a, type: 3}
-      m_AnimationSpeed: 5
+      m_AnimationSpeed: 5.0000005
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: 36, y: -6, z: 0}

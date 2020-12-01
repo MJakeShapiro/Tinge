@@ -21287,7 +21287,7 @@ Tilemap:
       - {fileID: 2339441204619450494, guid: 488ba15a083562047aa1b53c715aba8a, type: 3}
       - {fileID: 3718299316348199318, guid: 488ba15a083562047aa1b53c715aba8a, type: 3}
       - {fileID: -92115015825897824, guid: 488ba15a083562047aa1b53c715aba8a, type: 3}
-      m_AnimationSpeed: 5
+      m_AnimationSpeed: 5.0000005
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: 19, y: -18, z: 0}
@@ -21593,7 +21593,7 @@ Tilemap:
       - {fileID: 2339441204619450494, guid: 488ba15a083562047aa1b53c715aba8a, type: 3}
       - {fileID: 3718299316348199318, guid: 488ba15a083562047aa1b53c715aba8a, type: 3}
       - {fileID: -92115015825897824, guid: 488ba15a083562047aa1b53c715aba8a, type: 3}
-      m_AnimationSpeed: 5
+      m_AnimationSpeed: 5.0000005
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: 13, y: -4, z: 0}
@@ -21674,7 +21674,7 @@ Tilemap:
       - {fileID: 2339441204619450494, guid: 488ba15a083562047aa1b53c715aba8a, type: 3}
       - {fileID: 3718299316348199318, guid: 488ba15a083562047aa1b53c715aba8a, type: 3}
       - {fileID: -92115015825897824, guid: 488ba15a083562047aa1b53c715aba8a, type: 3}
-      m_AnimationSpeed: 5.0000005
+      m_AnimationSpeed: 5
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   m_TileAssetArray:
@@ -94598,7 +94598,7 @@ GameObject:
   - component: {fileID: 3642559038506744129}
   - component: {fileID: 3775436738224298805}
   - component: {fileID: 5994953195339859282}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Slants
   m_TagString: Untagged
   m_Icon: {fileID: 0}
