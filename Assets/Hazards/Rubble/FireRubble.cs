@@ -7,6 +7,9 @@ public class FireRubble : MonoBehaviour
 
     [SerializeField]
     private int rubblesAmount = 10;
+    public float dropRate = 6f;
+    public float startRate = 0f;
+    public bool isDesone = false;
 
     [SerializeField]
     private float startAngle = 90f, endAngle = 270f;
@@ -16,7 +19,7 @@ public class FireRubble : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("Fire", 0f, 6f);
+        InvokeRepeating("Fire", startRate, dropRate);
     }
 
     private void Fire()

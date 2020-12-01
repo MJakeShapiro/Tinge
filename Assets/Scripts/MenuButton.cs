@@ -9,6 +9,10 @@ public class MenuButton : MonoBehaviour
 	[SerializeField] AnimatorFunctions animatorFunctions;
 	[SerializeField] int thisIndex;
 
+	public MenuStart start;
+	public QuitGame quit;
+
+
     // Update is called once per frame
     void Update()
     {
@@ -17,6 +21,20 @@ public class MenuButton : MonoBehaviour
 			animator.SetBool ("selected", true);
 			if(Input.GetAxis ("Submit") == 1){
 				animator.SetBool ("pressed", true);
+			}else if (animator.GetBool ("pressed") && thisIndex == 0){
+				SoundManager.PlaySound(SoundManager.Sound.MenuPress, 0.75f);
+				animator.SetBool ("pressed", false);
+				animatorFunctions.disableOnce = true;
+				
+				start.LoadScene("HubLevel");
+
+			}else if (animator.GetBool ("pressed") && thisIndex == 2){
+				SoundManager.PlaySound(SoundManager.Sound.MenuPress, 0.75f);
+				animator.SetBool ("pressed", false);
+				animatorFunctions.disableOnce = true;
+
+				quit.Quit();
+
 			}else if (animator.GetBool ("pressed")){
 				SoundManager.PlaySound(SoundManager.Sound.MenuPress, 0.75f);
 				animator.SetBool ("pressed", false);

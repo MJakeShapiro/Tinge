@@ -516,7 +516,7 @@ public class Player : MonoBehaviour
         myRigidBody.AddForce(new Vector2(slideDistance * direction, 0f), ForceMode2D.Impulse);
         float gravity = myRigidBody.gravityScale;
         myRigidBody.gravityScale = 0;
-        yield return new WaitForSeconds(0.7f);
+        yield return new WaitForSeconds(0.9f);
         isSliding = false;
         myRigidBody.gravityScale = gravity;
     }
