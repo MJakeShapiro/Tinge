@@ -32,7 +32,6 @@ public class MusicScenes : MonoBehaviour
                 audioSources[0].clip = clip;
                 audioSources[0].Play();
             }
-            Debug.Log(audioSources[0].clip.name);
         } else if (sceneName.Contains("Desert"))
         {
             if (audioSources[0].clip.name != "Western OUTSIDE LOOP")
@@ -41,7 +40,14 @@ public class MusicScenes : MonoBehaviour
                 audioSources[0].clip = clip;
                 audioSources[0].Play();
             }
-            Debug.Log(audioSources[0].clip.name);
+        } else if (sceneName.Contains("City"))
+        {
+            if (audioSources[0].clip.name != "Space Station SLOW LOOP")
+            {
+                AudioClip clip = Resources.Load("Space Station SLOW LOOP") as AudioClip;
+                audioSources[0].clip = clip;
+                audioSources[0].Play();
+            }
         }
         if (A.Length > 1)
             Destroy(this.gameObject);
