@@ -9,6 +9,7 @@ public class FireRubble : MonoBehaviour
     private int rubblesAmount = 10;
     public float dropRate = 6f;
     public float startRate = 0f;
+    public bool isDesone = false;
 
     [SerializeField]
     private float startAngle = 90f, endAngle = 270f;

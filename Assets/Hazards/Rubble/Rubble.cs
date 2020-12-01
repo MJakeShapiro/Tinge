@@ -7,11 +7,20 @@ public class Rubble : MonoBehaviour
     private Vector2 MoveDiriection;
     private float moveSpeed;
     private CircleCollider2D circleCollider;
+    public float desAfter = 3f;
 
     private void OnEnable()
     {
         StartCoroutine(trig());
-        Invoke("Destroy", 3f);
+        if(FindObjectOfType<FireRubble>().isDesone == true)
+        {
+            desAfter = 1f;
+        }
+        else
+        {
+            desAfter = 3f;
+        }
+        Invoke("Destroy", desAfter);
     }
 
     // Start is called before the first frame update
