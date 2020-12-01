@@ -14,6 +14,7 @@ public static class SoundManager
         DashFX,
         RunFX,
         JumpFX,
+        SmashFX,
     }
 
     private static Dictionary<Sound, float> soundTimerDictionary;
