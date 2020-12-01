@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MenuButton : MonoBehaviour
+public class OptionMenuButton : MonoBehaviour
 {
 	[SerializeField] MenuButtonController menuButtonController;
 	[SerializeField] Animator animator;
@@ -25,22 +25,9 @@ public class MenuButton : MonoBehaviour
 				SoundManager.PlaySound(SoundManager.Sound.MenuPress, 0.75f);
 				animator.SetBool ("pressed", false);
 				animatorFunctions.disableOnce = true;
-				
-				start.LoadScene("HubLevel");
 
-			}else if (animator.GetBool ("pressed") && thisIndex == 2){
-				SoundManager.PlaySound(SoundManager.Sound.MenuPress, 0.75f);
-				animator.SetBool ("pressed", false);
-				animatorFunctions.disableOnce = true;
+				start.LoadScene("MainMenuScene");
 
-				quit.Quit();
-
-			}else if (animator.GetBool ("pressed") && thisIndex == 1){
-				SoundManager.PlaySound(SoundManager.Sound.MenuPress, 0.75f);
-				animator.SetBool ("pressed", false);
-				animatorFunctions.disableOnce = true;
-
-				start.LoadScene("OptionsMenu");
 			}
 		}else{
 			animator.SetBool ("selected", false);

@@ -670,7 +670,6 @@ GameObject:
   - component: {fileID: 1079595923}
   - component: {fileID: 1079595922}
   - component: {fileID: 1079595921}
-  - component: {fileID: 1079595925}
   - component: {fileID: 1079595926}
   m_Layer: 5
   m_Name: Canvas
@@ -762,19 +761,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1079595925
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1079595920}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f6f0070c2b8f9d40b149cf5b3efad64, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioMixer: {fileID: 24100000, guid: e90cb8f6bc365d54cb03b36e3bb0cd55, type: 2}
 --- !u!114 &1079595926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -789,7 +775,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: 0
   keyDown: 0
-  maxIndex: 1
+  maxIndex: 0
   audioSource: {fileID: 0}
 --- !u!1 &1087016252
 GameObject:
@@ -880,7 +866,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1079595925}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: OptionsMenu, Assembly-CSharp
         m_MethodName: SetVolume
         m_Mode: 0
@@ -1178,14 +1164,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1691814895}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95fc6bc3adf445547a5780dcce194c79, type: 3}
+  m_Script: {fileID: 11500000, guid: 76fec675c2cf66a408c271cc23b9d74c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   menuButtonController: {fileID: 1079595926}
   animator: {fileID: 1691814898}
   animatorFunctions: {fileID: 1691814899}
-  thisIndex: 1
-  back: {fileID: 1796864940}
+  thisIndex: 0
+  start: {fileID: 1796864940}
+  quit: {fileID: 0}
 --- !u!95 &1691814898
 Animator:
   serializedVersion: 3
@@ -1330,7 +1317,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1796864938}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e50c3e7f9535394da3fcf7f336f2831, type: 3}
+  m_Script: {fileID: 11500000, guid: 1fb9495df3a360245a7c1957ec73d3c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1965231024
